@@ -1,0 +1,22 @@
+<variation-points>
+	<!-- Persistency -->
+	<variation name="DAOCSV" holder="$VP-DAO" value="csvDao" />
+	<variation name="DAOXML" holder="$VP-DAO" value="xmlDao" />
+	<variation name="DAODB" holder="$VP-DAO" value="jdbcDao" />
+	<variation name="DAOMEMORY" holder="$VP-DAO" value="inMemoryDao" />
+	
+	<!-- Monitoring -->
+	<variation name="SYSMON" holder="$VP-MONITORING" value="sysMonMonitoring" />
+	
+	<!-- Tracking -->
+	<variation name="LOGCG" holder="$VP-TRACKING" value="logcgTracking" />
+	
+	<!-- Audit -->
+	<variation name="LOGTXT" holder="$VP-AUDIT" value="logTXT" />
+	<variation name="LOGDB" holder="$VP-AUDIT" value="logDB" />
+	
+	<!-- Serialization -->
+	<variation name="BINSER" holder="$VP-SERIALIZATION" value="binSer" />
+	<variation name="XMLSER" holder="$VP-SERIALIZATION" value="xmlSer" />
+	<variation name="SOAPSER" holder="$VP-SERIALIZATION" value="soapSer" />
+</variation-points>
