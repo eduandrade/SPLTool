@@ -1,9 +1,9 @@
 
 CONFIG="/Users/eduardo/development/workspace-ipt/PROGERAS-SPL/configs/conf.config"
-VARIABILITY="/Users/eduardo/Dropbox/Mestrado/TEMA/2-SPL-CODEGEN/dev/variability.xml"
-INPUT="/Users/eduardo/Dropbox/Mestrado/TEMA/2-SPL-CODEGEN/dev/model-gerador.xml"
+VARIABILITY="/Users/eduardo/development/workspace-github/SPLTool/variability.xml"
+INPUT="/Users/eduardo/development/workspace-github/SPLTool/model-gerador-reembolso.xml"
 
-ruby read_model.rb $CONFIG $VARIABILITY $INPUT
+ruby read_model_reembolso.rb $CONFIG $VARIABILITY $INPUT
 
 echo "Copiando classes do pacote model"
 #rm -f /Users/eduardo/development/workspace-ipt/Playground/src/br/com/splgenerator/model/*.java
