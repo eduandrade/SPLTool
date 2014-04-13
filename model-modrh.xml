@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+			<feature-root name="ModRH">
+				<feature name="NaoFuncionais">
+
+					<feature name="Serialization">
+						<feature name="BINSER"/>
+						<feature name="XMLSER"/>
+						<feature name="SOAPSER"/>
+					</feature>
+
+					<feature name="Monitoring">
+						<feature name="SYSMON"/>
+					</feature>
+
+					<feature name="Tracking">
+						<feature name="LOGCG"/>
+					</feature>
+
+					<feature name="Database">
+						<feature name="DDL"/>
+						<feature name="DML"/>
+						<feature name="DDLDML"/>
+					</feature>
+
+					<feature name="Persistency">
+						<feature name="DAOCSV"/>
+						<feature name="DAOXML"/>
+						<feature name="DAODB"/>
+					</feature>
+
+					<feature name="Audity">
+						<feature name="LOGTXT"/>
+					</feature>
+
+					<feature name="Dump">
+						<feature name="DUMPTXT"/>
+						<feature name="DUMPXML"/>
+					</feature>
+
+					<feature name="Presentation">
+						<feature name="UICON"/>
+						<feature name="MVCWEB"/>
+						<feature name="MVCWF"/>
+						<feature name="WPFWF"/>
+					</feature>
+				</feature>
+
+				<feature name="Funcionais" page="index.jsp" title="ModRH" template="xxx">
+					<feature name="Cadastro" page="cadastro/gerenciarFuncionarios.jsf" title="Cadastro" template="xxx">
+						<feature name="InserirFuncionario"/>
+						<feature name="VisualizarFuncionario"/>
+						<feature name="AtualizarFuncionario"/>
+						<feature name="RemoverFuncionario"/>
+					</feature>
+
+					<feature name="Relatorios" page="relatorios/index-relatorios.jsf" title="Relatorios" template="xxx">
+						<feature name="RelatorioAdmissoes"/>
+						<feature name="RelatorioAniversariantes"/>
+						<feature name="RelatorioDadosBancarios"/>
+					</feature>
+
+					<feature name="FolhaPagamento" page="folhapagamento/index-folhapagamento.jsf" title="Folha de Pagamento" template="xxx">
+						<feature name="Administracao">
+							<feature name="DadosPagamento"/>
+							<feature name="Afastamentos"/>
+							<feature name="Rescisoes"/>
+						</feature>
+
+						<feature name="ProcessamentoPagamento">
+							<feature name="Salario"/>
+							<feature name="Bonus"/>
+							<feature name="Reembolso"/>
+						</feature>
+
+						<feature name="Historico">
+							<feature name="MovimentacaoPessoal"/>
+							<feature name="Pagamento"/>
+						</feature>
+					</feature>
+				</feature>
+
+				<!-- legado reembolso -->
+				<feature name="Entity">
+					<feature name="Funcionario">
+						<entity name="Funcionario" package="br.com.splgenerator.model" template="templates/JavaBean.template.java" persist="true">
+							<fields>
+								<field name="id" type="long" value="0" />
+								<field name="nome" type="String" value="null" getter-and-setter="true" />
+								<field name="idade" type="int" value="0" />
+								<field name="cpf" type="String" value="null" />
+								<field name="endereco" type="String" value="null" />
+								<field name="dadosFuncionario" type="br.com.splgenerator.model.DadosFuncionario" value="new br.com.splgenerator.model.DadosFuncionario()" />
+							</fields>
+						</entity>
+					</feature>
+					<feature name="Empresa">
+						<entity name="Empresa" package="br.com.splgenerator.model" template="templates/JavaBean.template.java" persist="true">
+							<fields>
+								<field name="id" type="long" value="0" />
+								<field name="razaoSocial" type="String" value="null" />
+								<field name="nomeFantasia" type="String" value="null" />
+								<field name="cnpj" type="String" value="null" />
+								<field name="endereco" type="String" value="null" />
+							</fields>
+						</entity>
+					</feature>
+					<feature name="DadosFuncionario">
+						<entity name="DadosFuncionario" package="br.com.splgenerator.model" template="templates/JavaBean.template.java" persist="true">
+							<fields>
+								<field name="id" type="long" value="0" />
+								<field name="idFuncionario" type="long" value="0" />
+								<field name="maxAuxilioEstudo" type="Float" value="new Float(0)" />
+								<field name="percentualReembolsoCursos" type="int" value="0" />
+								<field name="fazReembolsoEstudo" type="boolean" value="false" />
+								<field name="cursoFuncionario" type="br.com.splgenerator.model.CursoFuncionario" value="new br.com.splgenerator.model.CursoFuncionario()" />
+							</fields>
+						</entity>
+					</feature>
+					<feature name="CursoFuncionario">
+						<entity name="CursoFuncionario" package="br.com.splgenerator.model" template="templates/JavaBean.template.java">
+							<fields>
+								<field name="id" type="long" value="0" />
+								<field name="idFuncionario" type="long" value="0" />
+								<field name="idParcelaCurso" type="long" value="0" />
+								<field name="curso" type="String" value="null" />
+								<field name="instituicao" type="String" value="null" />
+								<field name="dataInicio" type="java.util.Date" value="null" />
+								<field name="duracaoMeses" type="int" value="0" />
+								<field name="justificativa" type="String" value="&quot;&quot;" />
+								<field name="parcelaCurso" type="br.com.splgenerator.model.ParcelaCurso" value="new br.com.splgenerator.model.ParcelaCurso()" />
+							</fields>
+						</entity>
+					</feature>
+					<feature name="ParcelaCurso">
+						<entity name="ParcelaCurso" package="br.com.splgenerator.model" template="templates/JavaBean.template.java">
+							<fields>
+								<field name="id" type="long" value="0" />
+								<!-- <field name="sequencia" type="int" value="1" /> -->
+								<field name="dataVencimento" type="java.util.Date" value="null" />
+								<field name="valor" type="Float" value="null" />
+								<field name="valorReembolso" type="Float" value="null" />
+								<field name="flagAbaterAuxilioEstudo" type="boolean" value="false" />
+								<field name="dataAprovacaoChefe" type="java.util.Date" value="null" />
+							</fields>
+						</entity>
+					</feature>
+					<feature name="TipoDespesa">
+						<entity name="TipoDespesa" package="br.com.splgenerator.model" template="templates/JavaBean.template.java">
+							<fields>
+								<field name="id" type="long" value="0" />
+								<field name="descricao" type="String" value="null" />
+							</fields>
+						</entity>
+					</feature>
+					<feature name="ComprovanteDespesa">
+						<entity name="ComprovanteDespesa" package="br.com.splgenerator.model" template="templates/JavaBean.template.java">
+							<fields>
+								<field name="numero" type="String" value="null" />
+								<field name="dataEmissao" type="java.util.Date" value="null" />
+								<field name="valor" type="Float" value="null" />
+								<field name="fornecedor" type="String" value="null" />
+								<field name="itinerario" type="String" value="null" />
+								<field name="quilometragem" type="Float" value="null" />
+								<field name="observacao" type="String" value="null" />
+								<field name="tipoDespesa" type="br.com.splgenerator.model.TipoDespesa" value="new br.com.splgenerator.model.TipoDespesa()" />
+							</fields>
+						</entity>
+					</feature>
+					<feature name="Reembolso">
+						<entity name="Reembolso" package="br.com.splgenerator.model" template="templates/JavaBean.template.java">
+							<fields>
+								<field name="id" type="long" value="0" />
+								<field name="idParcelaCurso" type="long" value="0" />
+								<field name="dataPedido" type="java.util.Date" value="null" />
+								<field name="dataAprovacaoChefe" type="java.util.Date" value="null" />
+								<field name="dataAprovacaoDiretor" type="java.util.Date" value="null" />
+								<field name="dataAprovacaoFinanc" type="java.util.Date" value="null" />
+								<field name="dataPagamento" type="java.util.Date" value="null" />
+								<field name="finalidade" type="String" value="null" />
+								<field name="valorReembolso" type="Float" value="null" />
+								<field name="dataContabilizacao" type="java.util.Date" value="null" />
+								<field name="tipoReembolso" type="String" value="null" />
+								<field name="parcelaCurso" type="br.com.splgenerator.model.ParcelaCurso" value="new br.com.splgenerator.model.ParcelaCurso()" />
+								<field name="comprovanteDespesa" type="br.com.splgenerator.model.ComprovanteDespesa" value="new br.com.splgenerator.model.ComprovanteDespesa()" />
+							</fields>
+						</entity>
+					</feature>
+					<feature name="Adiantamento">
+						<entity name="Adiantamento" package="br.com.splgenerator.model" template="templates/JavaBean.template.java">
+							<fields>
+								<field name="data" type="java.util.Date" value="null" />
+								<field name="valor" type="Float" value="null" />
+								<field name="finalidade" type="String" value="null" />
+								<field name="dataVencimento" type="java.util.Date" value="null" />
+								<field name="dataContabilizacao" type="java.util.Date" value="null" />
+							</fields>
+						</entity>
+					</feature>
+					<!--
+					<feature name="ParametrosCalculo"/>
+					<feature name="Projeto"/>
+					-->
+
+					<managed-beans>
+						<managed-bean name="GerenciarFuncionario" package="br.com.splgenerator.web" template="templates/DaoManagedBean.template.java">
+							<!-- Variability Points -->
+							<dao interface="br.com.splgenerator.dao.SplReembolsoDao" name="dao" value="$VP-DAO" />
+							<log interface="br.com.splgenerator.audit.ILog" name="log" value="$VP-AUDIT" />
+
+							<fields>
+								<field name="novoFuncionario" type="br.com.splgenerator.model.Funcionario" value="new  br.com.splgenerator.model.Funcionario()" />
+								<field name="editarFuncionario" type="br.com.splgenerator.model.Funcionario" value="null" />
+							</fields>
+							<operations>
+								<operation return-type="java.util.List&lt;br.com.splgenerator.model.Funcionario&gt;" name="getFuncionarios">
+									return dao.getFuncionarios();
+								</operation>
+								<operation return-type="String" name="atualizarFuncionario">
+									dao.atualizarFuncionario(_editarFuncionario);
+									addFacesMessage("Funcionario editado com sucesso!");
+									return "gerenciarFuncionarios";
+								</operation>
+								<operation return-type="String" name="salvarFuncionario">
+									dao.salvarFuncionario(_novoFuncionario);
+									addFacesMessage("Funcionario adicionado com sucesso!");
+									this._novoFuncionario = new br.com.splgenerator.model.Funcionario();
+									return "gerenciarFuncionarios";
+								</operation>
+								<operation return-type="String" name="removerFuncionario">
+									dao.removerFuncionario((br.com.splgenerator.model.Funcionario) htmlDataTable.getRowData());
+									addFacesMessage("Funcionario removido com sucesso!");
+									return null;
+								</operation>
+
+								<operation return-type="String" name="selecionarFuncionario">
+									this._editarFuncionario = (br.com.splgenerator.model.Funcionario) htmlDataTable.getRowData();
+									return "editarFuncionario";
+								</operation>
+							</operations>
+						</managed-bean>
+
+						<managed-bean name="GerenciarTipoDespesa" package="br.com.splgenerator.web" template="templates/DaoManagedBean.template.java">
+							<!-- Variability Points -->
+							<dao interface="br.com.splgenerator.dao.SplReembolsoDao" name="dao" value="$VP-DAO" />
+							<log interface="br.com.splgenerator.audit.ILog" name="log" value="$VP-AUDIT" />
+
+							<fields>
+								<field name="novoTipoDespesa" type="br.com.splgenerator.model.TipoDespesa" value="new  br.com.splgenerator.model.TipoDespesa()" />
+								<field name="editarTipoDespesa" type="br.com.splgenerator.model.TipoDespesa" value="null" />
+							</fields>
+							<operations>
+								<operation return-type="java.util.List&lt;br.com.splgenerator.model.TipoDespesa&gt;" name="getTipoDespesas">
+									return dao.getTipoDespesas();
+								</operation>
+								<operation return-type="String" name="atualizarTipoDespesa">
+									dao.atualizarTipoDespesa(_editarTipoDespesa);
+									addFacesMessage("Tipo Despesa editado com sucesso!");
+									return "gerenciarTipoDespesa";
+								</operation>
+								<operation return-type="String" name="salvarTipoDespesa">
+									dao.salvarTipoDespesa(_novoTipoDespesa);
+									addFacesMessage("Tipo Despesa adicionado com sucesso!");
+									this._novoTipoDespesa = new br.com.splgenerator.model.TipoDespesa();
+									return "gerenciarTipoDespesa";
+								</operation>
+								<operation return-type="String" name="removerTipoDespesa">
+									dao.removerTipoDespesa((br.com.splgenerator.model.TipoDespesa) htmlDataTable.getRowData());
+									addFacesMessage("Tipo Despesa removido com sucesso!");
+									return null;
+								</operation>
+
+								<operation return-type="String" name="selecionarTipoDespesa">
+									this._editarTipoDespesa = (br.com.splgenerator.model.TipoDespesa) htmlDataTable.getRowData();
+									return "editarTipoDespesa";
+								</operation>
+							</operations>
+						</managed-bean>
+
+						<managed-bean name="GerenciarReembolso" package="br.com.splgenerator.web" template="templates/DaoManagedBean.template.java">
+							<!-- Variability Points -->
+							<dao interface="br.com.splgenerator.dao.SplReembolsoDao" name="dao" value="$VP-DAO" />
+							<log interface="br.com.splgenerator.audit.ILog" name="log" value="$VP-AUDIT" />
+
+							<fields>
+								<field name="novoReembolso" type="br.com.splgenerator.model.Reembolso" value="new  br.com.splgenerator.model.Reembolso()" />
+								<field name="editarReembolso" type="br.com.splgenerator.model.Reembolso" value="null" />
+							</fields>
+							<operations>
+								<operation return-type="java.util.List&lt;br.com.splgenerator.model.Reembolso&gt;" name="getReembolsos">
+									return dao.getReembolsos();
+								</operation>
+								<operation return-type="String" name="atualizarReembolso">
+									dao.atualizarReembolso(_editarReembolso);
+									addFacesMessage("Reembolso editado com sucesso!");
+									return "gerenciarReembolso";
+								</operation>
+								<operation return-type="String" name="salvarReembolso">
+									dao.salvarReembolso(_novoReembolso);
+									addFacesMessage("Pedido de reembolso adicionado com sucesso!");
+									this._novoReembolso = new br.com.splgenerator.model.Reembolso();
+									return "gerenciarReembolso";
+								</operation>
+								<operation return-type="String" name="removerReembolso">
+									dao.removerReembolso((br.com.splgenerator.model.Reembolso) htmlDataTable.getRowData());
+									addFacesMessage("Pedido de reembolso removido com sucesso!");
+									return null;
+								</operation>
+
+								<operation return-type="String" name="selecionarReembolso">
+									this._editarReembolso = (br.com.splgenerator.model.Reembolso) htmlDataTable.getRowData();
+									return "editarReembolso";
+								</operation>
+							</operations>
+						</managed-bean>
+					</managed-beans>
+
+					<pages>
+						<!-- FUNCIONARIOS -->
+						<page file-name="gerenciarFuncionarios.xhtml" title="#{msg['title.gerenciarfuncionarios']}" managed-bean="gerenciarFuncionario" template="templates/daoList.template.xhtml">
+							<add page="adicionarFuncionario.jsf" label="#{msg['label.adicionarfuncionario']}" />
+							<container id="form">
+								<table var="func" border="1" operation-list="funcionarios">
+									<columns>
+										<column label="#{msg['label.id']}" property="id" />
+										<column label="#{msg['label.nome']}" property="nome" />
+										<column label="#{msg['label.idade']}" property="idade" />
+										<column label="#{msg['label.cpf']}" property="cpf" />
+										<!--
+										<column label="#{msg['label.maxauxilio']}" property="dadosfuncionario.maxauxilioestudo" />
+										-->
+										<column label="#{msg['label.curso']}" property="dadosfuncionario.cursofuncionario.curso" />
+									</columns>
+									<edit action="selecionarFuncionario" label="#{msg['label.editar']}" />
+									<remove action="removerFuncionario" label="#{msg['label.remover']}" />
+								</table>
+							</container>
+						</page>
+
+						<page file-name="adicionarFuncionario.xhtml" title="#{msg['title.adicionarfuncionario']}" managed-bean="gerenciarFuncionario" template="templates/daoAddEdit.template.xhtml">
+							<container id="form">
+								<input_fields>
+									<input_field id="nome" backing-bean-property="nome" label="#{msg['label.nome']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.nome']}" size="50" />
+									<input_field id="idade" backing-bean-property="idade" label="#{msg['label.idade']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.idade']}" size="50" />
+									<input_field id="cpf" backing-bean-property="cpf" label="#{msg['label.cpf']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.cpf']}" size="50" />
+									<input_field id="endereco" backing-bean-property="endereco" label="#{msg['label.endereco']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.endereco']}" size="50" />
+
+									<input_field id="max-auxilio" backing-bean-property="dadosfuncionario.maxauxilioestudo" label="#{msg['label.maxauxilio']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.maxauxilio']}" size="50" />
+									<input_field id="percent-reembolso" backing-bean-property="dadosfuncionario.percentualreembolsocursos" label="#{msg['label.percentreembolso']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.percentreembolso']}" size="50" />
+									<input_field id="faz-reembolso" backing-bean-property="dadosfuncionario.fazreembolsoestudo" label="#{msg['label.possuireembolso']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.possuireembolso']}" size="50" />
+
+									<input_field id="curso" backing-bean-property="dadosfuncionario.cursofuncionario.curso" label="#{msg['label.curso']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.curso']}" size="50" />
+									<input_field id="instituicao" backing-bean-property="dadosfuncionario.cursofuncionario.instituicao" label="#{msg['label.instituicao']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.instituicao']}" size="50" />
+									<input_field id="data-inicio" backing-bean-property="dadosfuncionario.cursofuncionario.datainicio" label="#{msg['label.datainicio']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.datainicio']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="duracao" backing-bean-property="dadosfuncionario.cursofuncionario.duracaomeses" label="#{msg['label.duracaomeses']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.duracaomeses']}" size="50" />
+									<input_field id="justificativa" backing-bean-property="dadosfuncionario.cursofuncionario.justificativa" label="#{msg['label.justificativa']}" backing-bean="novofuncionario" required="false" required-message="" size="50" />
+
+									<input_field id="data-vencimento" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.datavencimento" label="#{msg['label.datavencimento']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.datavencimento']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="valor" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.valor" label="#{msg['label.valor']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.valor']}" size="50" />
+									<input_field id="valorreembolso" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.valorreembolso" label="#{msg['label.valorreembolso']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.valorreembolso']}" size="50" />
+									<input_field id="flagabaterauxilioestudo" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.flagabaterauxilioestudo" label="#{msg['label.flagabaterauxilioestudo']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.flagabaterauxilioestudo']}" size="50" />
+									<input_field id="data-aprovacaochefe" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.dataaprovacaochefe" label="#{msg['label.dataaprovacaochefe']}" backing-bean="novofuncionario" required="true" required-message="#{msg['required.dataaprovacaochefe']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+								</input_fields>
+								<save action="salvarFuncionario" label="#{msg['label.salvar']}" />
+							</container>
+						</page>
+
+						<page file-name="editarFuncionario.xhtml" title="#{msg['title.editarfuncionario']}" managed-bean="gerenciarFuncionario" template="templates/daoAddEdit.template.xhtml">
+							<container id="form">
+								<input_fields>
+									<input_field id="nome" backing-bean-property="nome" label="#{msg['label.nome']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar o nome." size="50" />
+									<input_field id="idade" backing-bean-property="idade" label="#{msg['label.idade']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar a idade." size="50" />
+									<input_field id="cpf" backing-bean-property="cpf" label="#{msg['label.cpf']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar o CPF." size="50" />
+									<input_field id="endereco" backing-bean-property="endereco" label="#{msg['label.endereco']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar o endereço." size="50" />
+
+									<input_field id="max-auxilio" backing-bean-property="dadosfuncionario.maxauxilioestudo" label="#{msg['label.maxauxilio']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar o valor máximo de auxílio estudo." size="50" />
+									<input_field id="percent-reembolso" backing-bean-property="dadosfuncionario.percentualreembolsocursos" label="#{msg['label.percentreembolso']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar a porcentegaem de reembolso." size="50" />
+									<!-- TODO checkbox -->
+									<input_field id="faz-reembolso" backing-bean-property="dadosfuncionario.fazreembolsoestudo" label="#{msg['label.possuireembolso']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar se o funcionário possui reembolso." size="50" />
+
+									<input_field id="curso" backing-bean-property="dadosfuncionario.cursofuncionario.curso" label="#{msg['label.curso']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar o curso." size="50" />
+									<input_field id="instituicao" backing-bean-property="dadosfuncionario.cursofuncionario.instituicao" label="#{msg['label.instituicao']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar a instituição." size="50" />
+									<input_field id="data-inicio" backing-bean-property="dadosfuncionario.cursofuncionario.datainicio" label="#{msg['label.datainicio']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar a data de início." size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="duracao" backing-bean-property="dadosfuncionario.cursofuncionario.duracaomeses" label="#{msg['label.duracaomeses']}" backing-bean="editarfuncionario" required="true" required-message="Favor informar a duração do curso." size="50" />
+									<input_field id="justificativa" backing-bean-property="dadosfuncionario.cursofuncionario.justificativa" label="#{msg['label.justificativa']}" backing-bean="editarfuncionario" required="false" required-message="" size="50" />
+
+									<input_field id="data-vencimento" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.datavencimento" label="#{msg['label.datavencimento']}" backing-bean="editarfuncionario" required="true" required-message="#{msg['required.datavencimento']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="valor" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.valor" label="#{msg['label.valor']}" backing-bean="editarfuncionario" required="true" required-message="#{msg['required.valor']}" size="50" />
+									<input_field id="valorreembolso" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.valorreembolso" label="#{msg['label.valorreembolso']}" backing-bean="editarfuncionario" required="true" required-message="#{msg['required.valorreembolso']}" size="50" />
+									<input_field id="flagabaterauxilioestudo" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.flagabaterauxilioestudo" label="#{msg['label.flagabaterauxilioestudo']}" backing-bean="editarfuncionario" required="true" required-message="#{msg['required.flagabaterauxilioestudo']}" size="50" />
+									<input_field id="data-aprovacaochefe" backing-bean-property="dadosfuncionario.cursofuncionario.parcelacurso.dataaprovacaochefe" label="#{msg['label.dataaprovacaochefe']}" backing-bean="editarfuncionario" required="true" required-message="#{msg['required.dataaprovacaochefe']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+
+								</input_fields>
+								<save action="atualizarFuncionario" label="#{msg['label.salvar']}" />
+							</container>
+						</page>
+
+						<!-- TIPO DESPESA -->
+						<page file-name="gerenciarTipoDespesa.xhtml" title="#{msg['title.gerenciartipodespesa']}" managed-bean="gerenciarTipoDespesa" template="templates/daoList.template.xhtml">
+							<add page="adicionarTipoDespesa.jsf" label="#{msg['label.adicionartipodespesa']}" />
+							<container id="form">
+								<table var="tpdespesa" border="1" operation-list="tipoDespesas">
+									<columns>
+										<column label="#{msg['label.id']}" property="id" />
+										<column label="#{msg['label.descricao']}" property="descricao" />
+									</columns>
+									<edit action="selecionarTipoDespesa" label="#{msg['label.editar']}" />
+									<remove action="removerTipoDespesa" label="#{msg['label.remover']}" />
+								</table>
+							</container>
+						</page>
+
+						<page file-name="adicionarTipoDespesa.xhtml" title="#{msg['title.adicionartipodespesa']}" managed-bean="gerenciarTipoDespesa" template="templates/daoAddEdit.template.xhtml">
+							<container id="form">
+								<input_fields>
+									<input_field id="descricao" backing-bean-property="descricao" label="#{msg['label.descricao']}" backing-bean="novotipodespesa" required="true" required-message="#{msg['required.descricao']}" size="50" />
+								</input_fields>
+								<save action="salvarTipoDespesa" label="#{msg['label.salvar']}" />
+							</container>
+						</page>
+
+						<page file-name="editarTipoDespesa.xhtml" title="#{msg['title.editartipodespesa']}" managed-bean="gerenciarTipoDespesa" template="templates/daoAddEdit.template.xhtml">
+							<container id="form">
+								<input_fields>
+									<input_field id="descricao" backing-bean-property="descricao" label="#{msg['label.descricao']}" backing-bean="editartipodespesa" required="true" required-message="#{msg['required.descricao']}" size="50" />
+								</input_fields>
+								<save action="atualizarTipoDespesa" label="#{msg['label.salvar']}" />
+							</container>
+						</page>
+
+						<!-- REEMBOLSO -->
+						<page file-name="gerenciarReembolso.xhtml" title="#{msg['title.gerenciarreembolso']}" managed-bean="gerenciarReembolso" template="templates/daoList.template.xhtml">
+							<add page="adicionarReembolso.jsf" label="#{msg['label.adicionarreembolso']}" />
+							<container id="form">
+								<table var="reemb" border="1" operation-list="reembolsos">
+									<columns>
+										<column label="#{msg['label.id']}" property="id" />
+										<column label="#{msg['label.idparcelacurso']}" property="idparcelacurso" />
+										<!--
+										<column label="#{msg['label.datapedido']}" property="datapedido" />
+										-->
+										<column label="#{msg['label.finalidade']}" property="finalidade" />
+										<column label="#{msg['label.valorreembolso']}" property="valorreembolso" />
+									</columns>
+									<edit action="selecionarReembolso" label="#{msg['label.editar']}" />
+									<remove action="removerReembolso" label="#{msg['label.remover']}" />
+								</table>
+							</container>
+						</page>
+
+						<page file-name="adicionarReembolso.xhtml" title="#{msg['title.adicionarreembolso']}" managed-bean="gerenciarReembolso" template="templates/daoAddEdit.template.xhtml">
+							<container id="form">
+								<input_fields>
+									<input_field id="idparcelacurso" backing-bean-property="idparcelacurso" label="#{msg['label.idparcelacurso']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.idparcelacurso']}" size="50" />
+									<input_field id="datapedido" backing-bean-property="datapedido" label="#{msg['label.datapedido']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.datapedido']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+
+									<input_field id="dataaprovacaochefe" backing-bean-property="dataaprovacaochefe" label="#{msg['label.dataaprovacaochefe']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.dataaprovacaochefe']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="dataaprovacaodiretor" backing-bean-property="dataaprovacaodiretor" label="#{msg['label.dataaprovacaodiretor']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.dataaprovacaodiretor']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="dataaprovacaofinanc" backing-bean-property="dataaprovacaofinanc" label="#{msg['label.dataaprovacaofinanc']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.dataaprovacaofinanc']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="datapagamento" backing-bean-property="datapagamento" label="#{msg['label.datapagamento']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.datapagamento']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+
+									<input_field id="finalidade" backing-bean-property="finalidade" label="#{msg['label.finalidade']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.finalidade']}" size="50" />
+									<input_field id="valorreembolso" backing-bean-property="valorreembolso" label="#{msg['label.valorreembolsopedido']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.valorreembolsopedido']}" size="50" />
+
+									<input_field id="datacontabilizacao" backing-bean-property="datacontabilizacao" label="#{msg['label.datacontabilizacao']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.datacontabilizacao']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="tiporeembolso" backing-bean-property="tiporeembolso" label="#{msg['label.tiporeembolso']}" backing-bean="novoreembolso" required="true" required-message="#{msg['required.tiporeembolso']}" size="50" />
+								</input_fields>
+								<save action="salvarReembolso" label="#{msg['label.salvar']}" />
+							</container>
+						</page>
+
+						<page file-name="editarReembolso.xhtml" title="#{msg['title.editarreembolso']}" managed-bean="gerenciarReembolso" template="templates/daoAddEdit.template.xhtml">
+							<container id="form">
+								<input_fields>
+									<input_field id="idparcelacurso" backing-bean-property="idparcelacurso" label="#{msg['label.idparcelacurso']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.idparcelacurso']}" size="50" />
+									<input_field id="datapedido" backing-bean-property="datapedido" label="#{msg['label.datapedido']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.datapedido']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+
+									<input_field id="dataaprovacaochefe" backing-bean-property="dataaprovacaochefe" label="#{msg['label.dataaprovacaochefe']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.dataaprovacaochefe']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="dataaprovacaodiretor" backing-bean-property="dataaprovacaodiretor" label="#{msg['label.dataaprovacaodiretor']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.dataaprovacaodiretor']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="dataaprovacaofinanc" backing-bean-property="dataaprovacaofinanc" label="#{msg['label.dataaprovacaofinanc']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.dataaprovacaofinanc']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="datapagamento" backing-bean-property="datapagamento" label="#{msg['label.datapagamento']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.datapagamento']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+
+									<input_field id="finalidade" backing-bean-property="finalidade" label="#{msg['label.finalidade']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.finalidade']}" size="50" />
+									<input_field id="valorreembolso" backing-bean-property="valorreembolso" label="#{msg['label.valorreembolsopedido']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.valorreembolsopedido']}" size="50" />
+
+									<input_field id="datacontabilizacao" backing-bean-property="datacontabilizacao" label="#{msg['label.datacontabilizacao']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.datacontabilizacao']}" size="50" converter="&lt;f:convertDateTime pattern='dd/MM/yyyy' /&gt;" />
+									<input_field id="tiporeembolso" backing-bean-property="tiporeembolso" label="#{msg['label.tiporeembolso']}" backing-bean="editarreembolso" required="true" required-message="#{msg['required.tiporeembolso']}" size="50" />
+
+								</input_fields>
+								<save action="atualizarReembolso" label="#{msg['label.salvar']}" />
+							</container>
+						</page>
+
+						<page file-name="index.xhtml" title="#{msg['title.index']}" managed-bean="" template="templates/index.template.xhtml">
+							<container />
+							<links>
+								<!--
+								<link value="gerenciarFuncionarios.jsf" label="#{msg['title.gerenciarfuncionarios']}" />
+								<link value="gerenciarTipoDespesa.jsf" label="#{msg['title.gerenciartipodespesa']}" />
+								<link value="gerenciarReembolso.jsf" label="#{msg['title.gerenciarreembolso']}" />
+								-->
+								<link value="cadastro.jsf" label="Cadastro" feature-name="Cadastro" />
+								<link value="relatorios.jsf" label="Relatorios" feature-name="Relatorios" />
+								<link value="folhapagamento.jsf" label="Folha de Pagamento" feature-name="FolhaPagamento" />
+							</links>
+						</page>
+
+					</pages>
+				</feature>
+			</feature-root>
+	</featureModel>
