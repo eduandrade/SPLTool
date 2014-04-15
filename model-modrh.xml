@@ -47,14 +47,14 @@
 				</feature>
 
 				<feature name="Funcionais" page="index.jsp" title="ModRH" template="xxx">
-					<feature name="Cadastro" page="cadastro/gerenciarFuncionarios.jsf" title="Cadastro" template="xxx">
+					<feature name="Cadastro" page="cadastro/gerenciarFuncionarios.jsf" title="Cadastro" template="xxx" is-parent="true">
 						<feature name="InserirFuncionario"/>
 						<feature name="VisualizarFuncionario"/>
 						<feature name="AtualizarFuncionario"/>
 						<feature name="RemoverFuncionario"/>
 					</feature>
 
-					<feature name="Relatorios" page="relatorios/index-relatorios.jsf" title="Relatorios" template="xxx">
+					<feature name="Relatorios" page="relatorios/index-relatorios.jsf" title="Relatorios" template="xxx" is-parent="true">
 						<feature name="RelatorioAdmissoes"/>
 						<feature name="RelatorioAniversariantes"/>
 						<feature name="RelatorioDadosBancarios"/>
