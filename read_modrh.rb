@@ -305,6 +305,40 @@ def process_features( doc )
 
 end
 
+def process_features2( doc )
+  puts ">Processando features..."
+  doc.elements.each("featureModel/feature-root/feature[@name='Funcionais']") { |features|
+    page_name = ""
+    page_features = []
+
+    features.each_recursive do |child_element|
+          child_name = child_element.attributes["name"]
+          #is_parent = child_element.attributes["is-parent"]
+          is_parent = false
+          if child_element.attributes["is-parent"] == "true"
+            is_parent = true
+          end
+          #puts "> #{child_name} / #{is_parent}"
+
+          if is_parent == true
+            if page_features.empty?
+              page_name = child_name
+              #puts "DEBUG1 -  #{page_name} / #{is_parent} / #{page_features}"
+            else
+              puts ">>Criando pagina #{page_name} com as features #{page_features}"
+              page_features.clear()
+              page_name = child_name
+              #puts "DEBUG2 -  #{page_name} / #{is_parent} / #{page_features}"
+            end
+          else
+            #puts ">>Adicionando #{child_name}."
+            page_features.push(child_name)
+            #puts "DEBUG3 -  #{page_name} / #{is_parent} / #{page_features}"
+          end
+    end
+  }
+end
+
 def process_config( file )
 
   puts "Processando o arquivo [#{file}]..."
@@ -324,7 +358,7 @@ def process_model( file )
   #process_entities( doc )
   #process_managed_beans( doc )
   #process_pages( doc )
-  process_features (doc)
+  process_features2 (doc)
 
   puts "Finalizado a geracao de codigo!"
 

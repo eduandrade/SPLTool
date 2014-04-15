@@ -60,20 +60,20 @@
 						<feature name="RelatorioDadosBancarios"/>
 					</feature>
 
-					<feature name="FolhaPagamento" page="folhapagamento/index-folhapagamento.jsf" title="Folha de Pagamento" template="xxx">
-						<feature name="Administracao">
+					<feature name="FolhaPagamento" page="folhapagamento/index-folhapagamento.jsf" title="Folha de Pagamento" template="xxx" is-parent="true">
+						<feature name="Administracao" is-parent="true">
 							<feature name="DadosPagamento"/>
 							<feature name="Afastamentos"/>
 							<feature name="Rescisoes"/>
 						</feature>
 
-						<feature name="ProcessamentoPagamento">
+						<feature name="ProcessamentoPagamento" is-parent="true">
 							<feature name="Salario"/>
 							<feature name="Bonus"/>
 							<feature name="Reembolso"/>
 						</feature>
 
-						<feature name="Historico">
+						<feature name="Historico" is-parent="true">
 							<feature name="MovimentacaoPessoal"/>
 							<feature name="Pagamento"/>
 						</feature>
