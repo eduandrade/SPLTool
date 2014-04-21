@@ -12,7 +12,7 @@
 	=======================================================================================
 	-->
     <h:head>
-        <title><%= page.title() %></title>
+        <title><%= page.title %></title>
 
 		<link rel="stylesheet" type="text/css" href="style/main.css" />
 
@@ -23,16 +23,20 @@
     <h:body>
     	<f:loadBundle basename="messages" var="msg"/>
 
-		<h2><%= page.title() %></h2>
+		<h2><%= page.title %></h2>
 
         <UL TYPE="circle">
 		<% page.links.each { |link| %>
+
+      <% if @contentsArray.include? link.id %>
 			<LI>
 				<h:outputLink value="<%= link.value() %>">
 					<%= link.label() %>
 				</h:outputLink>
 			</LI>
-		<% } %>
+      <% end %>
+
+    <% } %>
 		</UL>
 
     </h:body>
