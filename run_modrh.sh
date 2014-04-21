@@ -3,6 +3,7 @@
 CONFIG="/Users/eduardo/development/workspace-ipt/PROGERAS-SPL/configs/conf.config"
 VARIABILITY="/Users/eduardo/development/workspace-github/SPLTool/variability.xml"
 INPUT="/Users/eduardo/development/workspace-github/SPLTool/model-modrh.xml"
+MODRHWORKSPACE="/Users/eduardo/development/workspace-github/ModRH-Git"
 
 rm -rf output/java/*
 rm -rf output/pages/*
@@ -24,9 +25,9 @@ echo "Copiando classes do pacote web"
 
 echo "Copiando paginas"
 #cp output/pages/*.xhtml /Users/eduardo/development/workspace-ipt/ModRH/WebContent/
-cp output/pages/cadastro/*.xhtml /Users/eduardo/development/workspace-ipt/ModRH/WebContent/cadastro/
-cp output/pages/relatorios/*.xhtml /Users/eduardo/development/workspace-ipt/ModRH/WebContent/relatorios/
-cp output/pages/folhapagamento/*.xhtml /Users/eduardo/development/workspace-ipt/ModRH/WebContent/folhapagamento/
-cp output/pages/folhapagamento/administracao/*.xhtml /Users/eduardo/development/workspace-ipt/ModRH/WebContent/folhapagamento/administracao/
-cp output/pages/folhapagamento/processamentopagamento/*.xhtml /Users/eduardo/development/workspace-ipt/ModRH/WebContent/folhapagamento/processamentopagamento/
-cp output/pages/folhapagamento/historico/*.xhtml /Users/eduardo/development/workspace-ipt/ModRH/WebContent/folhapagamento/historico/
+cp output/pages/cadastro/*.xhtml $MODRHWORKSPACE/WebContent/cadastro/
+cp output/pages/relatorios/*.xhtml $MODRHWORKSPACE/WebContent/relatorios/
+cp output/pages/folhapagamento/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/
+cp output/pages/folhapagamento/administracao/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/administracao/
+cp output/pages/folhapagamento/processamentopagamento/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/processamentopagamento/
+cp output/pages/folhapagamento/historico/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/historico/
