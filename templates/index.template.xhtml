@@ -13,31 +13,28 @@
 	-->
     <h:head>
         <title><%= page.title %></title>
-
-		<link rel="stylesheet" type="text/css" href="style/main.css" />
-
-		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-		<meta http-equiv="Pragma" content="no-cache" />
-		<meta http-equiv="Expires" content="0" />
+    		<link rel="stylesheet" type="text/css" href="style/main.css" />
+    		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    		<meta http-equiv="Pragma" content="no-cache" />
+    		<meta http-equiv="Expires" content="0" />
     </h:head>
     <h:body>
     	<f:loadBundle basename="messages" var="msg"/>
 
 		<h2><%= page.title %></h2>
 
-        <UL TYPE="circle">
+        <ul TYPE="circle">
 		<% page.links.each { |link| %>
-
       <% if @contentsArray.include? link.id %>
-			<LI>
-				<h:outputLink value="<%= link.value() %>">
-					<%= link.label() %>
-				</h:outputLink>
-			</LI>
+			   <li><h:outputLink value="<%= link.value() %>"><%= link.label() %></h:outputLink></li>
       <% end %>
-
     <% } %>
-		</UL>
+        </ul>
+
+    <br />
+    <h:outputLink value="../index.jsf">
+		  Home
+	 </h:outputLink>
 
     </h:body>
 </html>

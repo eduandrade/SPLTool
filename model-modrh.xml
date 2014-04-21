@@ -39,16 +39,14 @@
 				</feature>
 
 				<feature name="Funcionais" page="index.jsp" title="ModRH" template="xxx" is-parent="true" has-features="">
-					<!--
-					<feature name="Cadastro" page="cadastro/gerenciarFuncionarios.jsf" title="Cadastro" template="templates/index.template.xhtml" is-parent="true">
-						<feature name="InserirFuncionario"/>
-						<feature name="VisualizarFuncionario"/>
-						<feature name="AtualizarFuncionario"/>
-						<feature name="RemoverFuncionario"/>
-					</feature>
-					-->
 
-					<feature name="Relatorios" page="relatorios/index-relatorios.xhtml" title="Relatorios" template="templates/index.template.xhtml" is-parent="true">
+					<feature name="Cadastro" page="cadastro/index.xhtml" title="Cadastro" template="templates/index.template.xhtml" is-parent="true">
+						<links>
+							<link id="GerenciarFuncionario" value="gerenciarFuncionarios.jsf" label="Gerenciar Funcionarios"/>
+						</links>
+					</feature>
+
+					<feature name="Relatorios" page="relatorios/index.xhtml" title="Relatorios" template="templates/index.template.xhtml" is-parent="true">
 						<links>
 							<link id="RelatorioAdmissoes" value="relatorioAdmissoes.jsf" label="Relatorio de Admissoes" />
 							<link id="RelatorioAniversariantes" value="relatorioAniversariantes.jsf" label="Relatorio de Aniversariantes" />
@@ -57,6 +55,13 @@
 				</feature>
 
 				<!-- Folha Pagamento -->
+				<feature name="FolhaPagamento" page="folhapagamento/index.xhtml" title="Folha de Pagamento" template="templates/index.template.xhtml" is-parent="true">
+					<links>
+						<link id="Administracao" value="administracao/index-administracao.jsf" label="Administracao" />
+						<link id="ProcessamentoPagamento" value="processamentopagamento/index-processamentoPagamento.jsf" label="Processamento de Pagamento" />
+						<link id="Historico" value="historico/index-historico.jsf" label="Historico" />
+					</links>
+				</feature>
 				<feature name="Administracao" page="folhapagamento/administracao/index-administracao.xhtml" title="Administracao" template="templates/index.template.xhtml" is-parent="true">
 					<links>
 						<link id="DadosPagamento" value="dadosPagamento.jsf" label="Dados de Pagamento" />
@@ -78,25 +83,6 @@
 					</links>
 				</feature>
 				<!-- Folha Pagamento -->
-
-					<!--
-					<feature name="FolhaPagamento" page="folhapagamento/index-folhapagamento.xhtml" title="Folha de Pagamento" template="templates/index.template.xhtml" is-parent="true">
-						<feature name="Administracao" page="folhapagamento/administracao/index-administracao.xhtml" title="Administracao" template="templates/index.template.xhtml" is-parent="true">
-							<feature name="DadosPagamento" page="folhapagamento/administracao/dadosPagamento.xhtml" title="Dados de Pagamento" template="templates/index.template.xhtml" is-parent="false"/>
-							<feature name="Afastamentos" page="folhapagamento/administracao/afastamentos.xhtml" title="Afastamentos" template="templates/index.template.xhtml" is-parent="false"/>
-							<feature name="Rescisoes" page="folhapagamento/administracao/rescisoes.xhtml" title="Rescisoes" template="templates/index.template.xhtml" is-parent="false"/>
-						</feature>
-						<feature name="ProcessamentoPagamento" is-parent="true">
-							<feature name="Salario"/>
-							<feature name="Bonus"/>
-							<feature name="Reembolso"/>
-						</feature>
-						<feature name="Historico" is-parent="true">
-							<feature name="MovimentacaoPessoal"/>
-							<feature name="Pagamento"/>
-						</feature>
-					</feature>
-					-->
 				</feature>
 
 				<!-- legado reembolso -->
