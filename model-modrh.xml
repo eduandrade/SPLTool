@@ -1,52 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<featureModel chosenLayoutAlgorithm="1">
 			<feature-root name="ModRH">
+				
 				<feature name="NaoFuncionais">
-					<feature name="Serialization">
-						<feature name="BINSER"/>
-						<feature name="XMLSER"/>
-						<feature name="SOAPSER"/>
+					<feature name="Monitoracao">
+						<feature name="MONXML"/>
+						<feature name="MONTXT"/>
 					</feature>
-					<feature name="Monitoring">
-						<feature name="SYSMON"/>
+					<feature name="Persistencia">
+						<feature name="DAOJDBC"/>
+						<feature name="DAOJPA"/>
+						<feature name="DAOMEMORY"/>
 					</feature>
-					<feature name="Tracking">
-						<feature name="LOGCG"/>
-					</feature>
-					<feature name="Database">
-						<feature name="DDL"/>
-						<feature name="DML"/>
-						<feature name="DDLDML"/>
-					</feature>
-					<feature name="Persistency">
-						<feature name="DAOCSV"/>
-						<feature name="DAOXML"/>
-						<feature name="DAODB"/>
-					</feature>
-					<feature name="Audity">
+					<feature name="Auditoria">
 						<feature name="LOGTXT"/>
+						<feature name="LOGDB"/>
 					</feature>
-					<feature name="Dump">
-						<feature name="DUMPTXT"/>
-						<feature name="DUMPXML"/>
+					<feature name="Seguranca">
+						<feature name="ROLEBASED"/>
 					</feature>
-					<feature name="Presentation">
-						<feature name="UICON"/>
+					<feature name="Apresentacao">
 						<feature name="MVCWEB"/>
-						<feature name="MVCWF"/>
-						<feature name="WPFWF"/>
 					</feature>
 				</feature>
 
-				<feature name="Funcionais" page="index.jsp" title="ModRH" template="xxx" is-parent="true" has-features="">
-
+				<feature name="Funcionais" page="index.jsp" title="ModRH" template="index.template.xhtml" is-parent="true" has-features="">
 					<feature name="Cadastro" page="cadastro/index.xhtml" title="Cadastro" template="templates/index.template.xhtml" is-parent="true">
+						<managed-bean name="CadastroFuncionariosMB" template="templates/ManagedBean.template.java" />
 						<links>
 							<link id="GerenciarFuncionario" value="gerenciarFuncionarios.jsf" label="Gerenciar Funcionarios"/>
 						</links>
 					</feature>
-
 					<feature name="Relatorios" page="relatorios/index.xhtml" title="Relatorios" template="templates/index.template.xhtml" is-parent="true">
+						<managed-bean name="RelatoriosMB" template="templates/ManagedBean.template.java" />
 						<links>
 							<link id="RelatorioAdmissoes" value="relatorioAdmissoes.jsf" label="Relatorio de Admissoes" />
 							<link id="RelatorioAniversariantes" value="relatorioAniversariantes.jsf" label="Relatorio de Aniversariantes" />

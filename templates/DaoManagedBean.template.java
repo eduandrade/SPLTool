@@ -18,39 +18,23 @@ import javax.faces.context.FacesContext;
 public class <%= managed_bean.name() %> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
 	@ManagedProperty(value="#{<%= managed_bean.dao.value() %>}")
 	private <%= managed_bean.dao.interface() %> dao;
-	
 	@ManagedProperty(value="#{<%= managed_bean.log.value() %>}")
 	private <%= managed_bean.log.interface() %> log;
-	
 	private HtmlDataTable htmlDataTable;
-	
 	<% fields.each { |field| %>
 	private <%= field.type() %> _<%= field.name() %>;
 	<% } %>
-	
 	public <%= managed_bean.name() %>() { 
 	<% fields.each { |field| %>
 		_<%= field.name() %> = <%= field.value() %>;<% } %>
 	}
 	
-	public void setDao(<%= managed_bean.dao.interface() %> dao) {
-		this.dao = dao;
-	}
-	
-	public void setLog(<%= managed_bean.log.interface() %> log) {
-		this.log = log;
-	}
-	
-	public HtmlDataTable getHtmlDataTable() {
-        return htmlDataTable;
-    }
-
-    public void setHtmlDataTable(HtmlDataTable htmlDataTable) {
-        this.htmlDataTable = htmlDataTable;
-    }
+	public void setDao(<%= managed_bean.dao.interface() %> dao) { this.dao = dao; }
+	public void setLog(<%= managed_bean.log.interface() %> log) { this.log = log; }
+	public HtmlDataTable getHtmlDataTable() { return htmlDataTable; }
+    public void setHtmlDataTable(HtmlDataTable htmlDataTable) { this.htmlDataTable = htmlDataTable; }
 	
 	<% operations.each { |operation| %>
 	public <%= operation.return_type %> <%= operation.name %>() {
@@ -67,7 +51,7 @@ public class <%= managed_bean.name() %> implements Serializable {
 	<% 
 	end
 	} 
-		%>
+	%>
 	
 	private void addFacesMessage(String message) {
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(message));

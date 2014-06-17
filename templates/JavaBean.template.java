@@ -17,8 +17,15 @@ public class <%= entity.name() %> {
 	<% 
 	fields.each { |field| 
 	if (field.getter_setter() == true)%>
-		public <%= field.type() %> get<%= field.name().capitalize %>() { return _<%= field.name() %>; }
-		public void set<%= field.name().capitalize %>( <%= field.type() %> value ) { _<%= field.name() %> = value; }
+	
+		public <%= field.type() %> get<%= field.name().capitalize %>() { 
+			return _<%= field.name() %>; 
+		}
+		
+		public void set<%= field.name().capitalize %>( <%= field.type() %> value ) { 
+			_<%= field.name() %> = value; 
+		}
+		
 	<% 
 	end
 	} 

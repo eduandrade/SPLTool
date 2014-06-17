@@ -1,22 +1,22 @@
 <variation-points>
-	<!-- Persistency -->
-	<variation name="DAOCSV" holder="$VP-DAO" value="csvDao" />
-	<variation name="DAOXML" holder="$VP-DAO" value="xmlDao" />
-	<variation name="DAODB" holder="$VP-DAO" value="jdbcDao" />
+	
+	<!-- Monitoracao -->
+	<variation name="MONXML" holder="$VP-MONITORING" value="XML" />
+	<variation name="MONTXT" holder="$VP-MONITORING" value="TXT" />
+	
+	<!-- Persistencia -->
+	<variation name="DAOJPA" holder="$VP-DAO" value="jpaDao" />
+	<variation name="DAOJDBC" holder="$VP-DAO" value="jdbcDao" />
 	<variation name="DAOMEMORY" holder="$VP-DAO" value="inMemoryDao" />
 	
-	<!-- Monitoring -->
-	<variation name="SYSMON" holder="$VP-MONITORING" value="sysMonMonitoring" />
-	
-	<!-- Tracking -->
-	<variation name="LOGCG" holder="$VP-TRACKING" value="logcgTracking" />
-	
-	<!-- Audit -->
+	<!-- Auditoria -->
 	<variation name="LOGTXT" holder="$VP-AUDIT" value="logTXT" />
 	<variation name="LOGDB" holder="$VP-AUDIT" value="logDB" />
 	
-	<!-- Serialization -->
-	<variation name="BINSER" holder="$VP-SERIALIZATION" value="binSer" />
-	<variation name="XMLSER" holder="$VP-SERIALIZATION" value="xmlSer" />
-	<variation name="SOAPSER" holder="$VP-SERIALIZATION" value="soapSer" />
+	<!-- Seguranca -->
+	<variation name="ROLEBASED" holder="$VP-SECURITY" value="roleBased" />
+	
+	<!-- Apresentacao -->
+	<variation name="MVCWEB" holder="$VP-SECURITY" value="mvcWeb" />
+
 </variation-points>
