@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<featureModel chosenLayoutAlgorithm="1">
 			<feature-root name="ModRH">
-				
+
 				<feature name="NaoFuncionais">
 					<feature name="Monitoracao">
 						<feature name="MONXML"/>
@@ -26,13 +26,23 @@
 
 				<feature name="Funcionais" page="index.jsp" title="ModRH" template="index.template.xhtml" is-parent="true" has-features="">
 					<feature name="Cadastro" page="cadastro/index.xhtml" title="Cadastro" template="templates/index.template.xhtml" is-parent="true">
-						<managed-bean name="CadastroFuncionariosMB" template="templates/ManagedBean.template.java" />
+						<managed-beans>
+							<managed-bean name="GerenciarFuncionario"
+														template="templates/Cadastro/GerenciarFuncionario.template.java"
+														output-dir="output/java/Cadastro"
+														file-name="GerenciarFuncionario.java" />
+						</managed-beans>
 						<links>
 							<link id="GerenciarFuncionario" value="gerenciarFuncionarios.jsf" label="Gerenciar Funcionarios"/>
 						</links>
 					</feature>
 					<feature name="Relatorios" page="relatorios/index.xhtml" title="Relatorios" template="templates/index.template.xhtml" is-parent="true">
-						<managed-bean name="RelatoriosMB" template="templates/ManagedBean.template.java" />
+						<managed-beans>
+							<managed-bean name="Relatorios"
+														template="templates/Relatorios/RelatorioMB.template.java"
+														output-dir="output/java/Relatorios"
+														file-name="RelatorioMB.java" />
+						</managed-beans>
 						<links>
 							<link id="RelatorioAdmissoes" value="relatorioAdmissoes.jsf" label="Relatorio de Admissoes" />
 							<link id="RelatorioAniversariantes" value="relatorioAniversariantes.jsf" label="Relatorio de Aniversariantes" />
@@ -49,6 +59,20 @@
 					</links>
 				</feature>
 				<feature name="Administracao" page="folhapagamento/administracao/index-administracao.xhtml" title="Administracao" template="templates/index.template.xhtml" is-parent="true">
+					<managed-beans>
+						<managed-bean name="DadosPagamento"
+													template="templates/FolhaPagamento/Administracao/DadosPagamento.template.java"
+													output-dir="output/java/FolhaPagamento/Administracao"
+													file-name="DadosPagamento.java" />
+						<managed-bean name="Afastamentos"
+													template="templates/FolhaPagamento/Administracao/Afastamentos.template.java"
+													output-dir="output/java/FolhaPagamento/Administracao"
+													file-name="Afastamentos.java" />
+						<managed-bean name="Rescisoes"
+													template="templates/FolhaPagamento/Administracao/Rescisoes.template.java"
+													output-dir="output/java/FolhaPagamento/Administracao"
+													file-name="Rescisoes.java" />
+					</managed-beans>
 					<links>
 						<link id="DadosPagamento" value="dadosPagamento.jsf" label="Dados de Pagamento" />
 						<link id="Afastamentos" value="afastamentos.jsf" label="Afastamentos" />
@@ -56,6 +80,20 @@
 					</links>
 				</feature>
 				<feature name="ProcessamentoPagamento" page="folhapagamento/processamentopagamento/index-processamentoPagamento.xhtml" title="Processamento de Pagamento" template="templates/index.template.xhtml" is-parent="true">
+					<managed-beans>
+						<managed-bean name="Salario"
+													template="templates/FolhaPagamento/ProcessamentoPagamento/Salario.template.java"
+													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento"
+													file-name="Salario.java" />
+						<managed-bean name="Bonus"
+													template="templates/FolhaPagamento/ProcessamentoPagamento/Bonus.template.java"
+													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento"
+													file-name="Bonus.java" />
+						<managed-bean name="Reembolso"
+													template="templates/FolhaPagamento/ProcessamentoPagamento/Reembolso.template.java"
+													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento"
+													file-name="Reembolso.java" />
+					</managed-beans>
 					<links>
 						<link id="Salario" value="salario.jsf" label="Salario"/>
 						<link id="Bonus" value="bonus.jsf" label="Bonus"/>
@@ -63,6 +101,7 @@
 					</links>
 				</feature>
 				<feature name="Historico" page="folhapagamento/historico/index-historico.xhtml" title="Historico" template="templates/index.template.xhtml" is-parent="true">
+					<!-- TODO: MANAGED BEANS! -->
 					<links>
 						<link id="MovimentacaoPessoal" value="movimentacaoPessoal.jsf" label="Movimentacao Pessoal"/>
 						<link id="Pagamento" value="pagamento.jsf" label="Pagamento"/>

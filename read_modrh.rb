@@ -75,6 +75,19 @@ def process_features( doc )
     new_code = erb.result( binding )
     create_file( "output/pages", "#{page.file_name}", new_code  )
 
+    features.elements.each("managed-beans/managed-bean") { |elm_mb|
+      if (elm_mb)
+        #mbName = elm_mb.attributes["name"]
+        mbTemplate = elm_mb.attributes["template"]
+        mbOutputDir = elm_mb.attributes["output-dir"]
+        mbFileName = elm_mb.attributes["file-name"]
+
+        erb = ERB.new( File.open( mbTemplate ).read )
+        new_code = erb.result( binding )
+        create_file( "#{mbOutputDir}", "#{mbFileName}", new_code  )
+      end
+    }
+
   }
 end
 

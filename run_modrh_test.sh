@@ -19,17 +19,17 @@ mkdir -p output/pages/folhapagamento/historico/
 
 ruby read_modrh.rb $CONFIG $VARIABILITY $INPUT
 
-echo "Copiando classes do pacote model"
+#echo "Copiando classes do pacote model"
 #cp output/java/model/*.java /Users/eduardo/development/workspace-ipt/ModRH/src/br/com/splgenerator/model/
 
-echo "Copiando classes do pacote web"
+#echo "Copiando classes do pacote web"
 #cp output/java/web/*.java /Users/eduardo/development/workspace-ipt/ModRH/src/br/com/splgenerator/web/
 
 echo "Copiando paginas"
 #cp output/pages/*.xhtml /Users/eduardo/development/workspace-ipt/ModRH/WebContent/
-cp output/pages/cadastro/*.xhtml $MODRHWORKSPACE/WebContent/cadastro/
-cp output/pages/relatorios/*.xhtml $MODRHWORKSPACE/WebContent/relatorios/
-cp output/pages/folhapagamento/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/
-cp output/pages/folhapagamento/administracao/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/administracao/
-cp output/pages/folhapagamento/processamentopagamento/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/processamentopagamento/
-cp output/pages/folhapagamento/historico/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/historico/
+#cp output/pages/cadastro/*.xhtml $MODRHWORKSPACE/WebContent/cadastro/
+#cp output/pages/relatorios/*.xhtml $MODRHWORKSPACE/WebContent/relatorios/
+#cp output/pages/folhapagamento/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/
+#cp output/pages/folhapagamento/administracao/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/administracao/
+#cp output/pages/folhapagamento/processamentopagamento/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/processamentopagamento/
+#cp output/pages/folhapagamento/historico/*.xhtml $MODRHWORKSPACE/WebContent/folhapagamento/historico/
