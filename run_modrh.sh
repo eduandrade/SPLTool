@@ -19,10 +19,22 @@ mkdir -p output/pages/folhapagamento/historico/
 
 ruby read_modrh.rb $CONFIG $VARIABILITY $INPUT
 
-echo "Copiando classes do pacote model"
-#cp output/java/model/*.java /Users/eduardo/development/workspace-ipt/ModRH/src/br/com/splgenerator/model/
+echo "Copiando classes do Cadastro"
+cp -r output/java/Cadastro/* $MODRHWORKSPACE/src/
 
-echo "Copiando classes do pacote web"
+echo "Copiando classes do Relatorios"
+cp -r output/java/Relatorios/* $MODRHWORKSPACE/src/
+
+echo "Copiando classes do FolhaPagamento/Administracao"
+cp -r output/java/FolhaPagamento/Administracao/* $MODRHWORKSPACE/src/
+
+echo "Copiando classes do FolhaPagamento/ProcessamentoPagamento"
+cp -r output/java/FolhaPagamento/ProcessamentoPagamento/* $MODRHWORKSPACE/src/
+
+echo "Copiando classes do Monitoracao"
+cp -r output/java/Monitoracao/* $MODRHWORKSPACE/src/
+
+#echo "Copiando classes do pacote web"
 #cp output/java/web/*.java /Users/eduardo/development/workspace-ipt/ModRH/src/br/com/splgenerator/web/
 
 echo "Copiando paginas"

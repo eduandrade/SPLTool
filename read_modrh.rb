@@ -51,6 +51,16 @@ def create_file( dir, file_name, content )
   File.open( "#{dir}/#{file_name}", "w" ).write( content )
 end
 
+def copy_file( includeFilePath, includeOutputDir, condition )
+  if ( condition.to_s == '' or @contentsArray.include? condition )
+    puts "Copiando [condicao(#{condition})]: #{includeFilePath} -> #{includeOutputDir}"
+    unless File.directory?(includeOutputDir)
+      FileUtils.mkdir_p(includeOutputDir)
+    end
+    FileUtils.cp(includeFilePath, includeOutputDir)
+  end
+end
+
 def process_features( doc )
   puts ">Processando features..."
   doc.elements.each("featureModel/feature-root/feature[@name='Funcionais']/feature") { |features|
@@ -70,22 +80,27 @@ def process_features( doc )
       page.links.push( link )
     }
 
-    #puts ">>Criando pagina '#{page.name}' com os links #{page.links}"
-    erb = ERB.new( File.open( page.template ).read )
-    new_code = erb.result( binding )
-    create_file( "output/pages", "#{page.file_name}", new_code  )
+    if (page.template)
+      erb = ERB.new( File.open( page.template ).read )
+      new_code = erb.result( binding )
+      create_file( "output/pages", "#{page.file_name}", new_code  )
+    end
 
     features.elements.each("managed-beans/managed-bean") { |elm_mb|
-      if (elm_mb)
-        #mbName = elm_mb.attributes["name"]
-        mbTemplate = elm_mb.attributes["template"]
-        mbOutputDir = elm_mb.attributes["output-dir"]
-        mbFileName = elm_mb.attributes["file-name"]
+      mbCondition = elm_mb.attributes["condition"]
+      mbTemplate = elm_mb.attributes["template"]
+      mbOutputDir = elm_mb.attributes["output-dir"]
+      mbFileName = elm_mb.attributes["file-name"]
 
+      if ( mbCondition.to_s == '' or @contentsArray.include? mbCondition )
         erb = ERB.new( File.open( mbTemplate ).read )
         new_code = erb.result( binding )
         create_file( "#{mbOutputDir}", "#{mbFileName}", new_code  )
       end
+    }
+
+    features.elements.each("includes/include") { |elm_include|
+      copy_file( elm_include.attributes["file-path"], elm_include.attributes["output-dir"], elm_include.attributes["condition"] )
     }
 
   }

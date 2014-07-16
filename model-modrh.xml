@@ -2,6 +2,7 @@
 	<featureModel chosenLayoutAlgorithm="1">
 			<feature-root name="ModRH">
 
+				<!-- TODO: copiar arquivos referentes nao funcionais -->
 				<feature name="NaoFuncionais">
 					<feature name="Monitoracao">
 						<feature name="MONXML"/>
@@ -27,9 +28,9 @@
 				<feature name="Funcionais" page="index.jsp" title="ModRH" template="index.template.xhtml" is-parent="true" has-features="">
 					<feature name="Cadastro" page="cadastro/index.xhtml" title="Cadastro" template="templates/index.template.xhtml" is-parent="true">
 						<managed-beans>
-							<managed-bean name="GerenciarFuncionario"
+							<managed-bean condition="GerenciarFuncionario"
 														template="templates/Cadastro/GerenciarFuncionario.template.java"
-														output-dir="output/java/Cadastro"
+														output-dir="output/java/Cadastro/br/com/splgenerator/web/cadastro"
 														file-name="GerenciarFuncionario.java" />
 						</managed-beans>
 						<links>
@@ -38,9 +39,9 @@
 					</feature>
 					<feature name="Relatorios" page="relatorios/index.xhtml" title="Relatorios" template="templates/index.template.xhtml" is-parent="true">
 						<managed-beans>
-							<managed-bean name="Relatorios"
+							<managed-bean condition="Relatorios"
 														template="templates/Relatorios/RelatorioMB.template.java"
-														output-dir="output/java/Relatorios"
+														output-dir="output/java/Relatorios/br/com/splgenerator/web/relatorio"
 														file-name="RelatorioMB.java" />
 						</managed-beans>
 						<links>
@@ -60,17 +61,17 @@
 				</feature>
 				<feature name="Administracao" page="folhapagamento/administracao/index-administracao.xhtml" title="Administracao" template="templates/index.template.xhtml" is-parent="true">
 					<managed-beans>
-						<managed-bean name="DadosPagamento"
+						<managed-bean condition="DadosPagamento"
 													template="templates/FolhaPagamento/Administracao/DadosPagamento.template.java"
-													output-dir="output/java/FolhaPagamento/Administracao"
+													output-dir="output/java/FolhaPagamento/Administracao/br/com/splgenerator/web/folhapagamento/adm"
 													file-name="DadosPagamento.java" />
-						<managed-bean name="Afastamentos"
+						<managed-bean condition="Afastamentos"
 													template="templates/FolhaPagamento/Administracao/Afastamentos.template.java"
-													output-dir="output/java/FolhaPagamento/Administracao"
+													output-dir="output/java/FolhaPagamento/Administracao/br/com/splgenerator/web/folhapagamento/adm"
 													file-name="Afastamentos.java" />
-						<managed-bean name="Rescisoes"
+						<managed-bean condition="Rescisoes"
 													template="templates/FolhaPagamento/Administracao/Rescisoes.template.java"
-													output-dir="output/java/FolhaPagamento/Administracao"
+													output-dir="output/java/FolhaPagamento/Administracao/br/com/splgenerator/web/folhapagamento/adm"
 													file-name="Rescisoes.java" />
 					</managed-beans>
 					<links>
@@ -81,17 +82,17 @@
 				</feature>
 				<feature name="ProcessamentoPagamento" page="folhapagamento/processamentopagamento/index-processamentoPagamento.xhtml" title="Processamento de Pagamento" template="templates/index.template.xhtml" is-parent="true">
 					<managed-beans>
-						<managed-bean name="Salario"
+						<managed-bean condition="Salario"
 													template="templates/FolhaPagamento/ProcessamentoPagamento/Salario.template.java"
-													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento"
+													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento/br/com/splgenerator/web/folhapagamento/processamentopagamento"
 													file-name="Salario.java" />
-						<managed-bean name="Bonus"
+						<managed-bean condition="Bonus"
 													template="templates/FolhaPagamento/ProcessamentoPagamento/Bonus.template.java"
-													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento"
+													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento/br/com/splgenerator/web/folhapagamento/processamentopagamento"
 													file-name="Bonus.java" />
-						<managed-bean name="Reembolso"
+						<managed-bean condition="Reembolso"
 													template="templates/FolhaPagamento/ProcessamentoPagamento/Reembolso.template.java"
-													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento"
+													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento/br/com/splgenerator/web/folhapagamento/processamentopagamento"
 													file-name="Reembolso.java" />
 					</managed-beans>
 					<links>
@@ -106,6 +107,31 @@
 						<link id="MovimentacaoPessoal" value="movimentacaoPessoal.jsf" label="Movimentacao Pessoal"/>
 						<link id="Pagamento" value="pagamento.jsf" label="Pagamento"/>
 					</links>
+				</feature>
+				<feature name="Monitoracao">
+					<managed-beans>
+						<managed-bean 
+													template="templates/Monitoracao/MonitoringServlet.template.java"
+													output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring"
+													file-name="MonitoringServlet.java" />
+					</managed-beans>
+					<includes>
+						<include file-path="resources/Monitoracao/IModRhStats.java"
+										 output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring" />
+					  <include file-path="resources/Monitoracao/MonitoringFactory.java"
+											output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring" />
+						<include file-path="resources/Monitoracao/ModRhStats.java"
+											output-dir="output/java/Monitoracao/br/com/splgenerator/monitoring" />
+					  <include file-path="resources/Monitoracao/ModRhStatsTxt.java"
+											output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring/txt"
+											condition="MONTXT" />
+					  <include file-path="resources/Monitoracao/BeanStatsXml.java"
+											output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring/xml"
+											condition="MONXML" />
+					  <include file-path="resources/Monitoracao/ModRhStatsXml.java"
+											output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring/xml"
+											condition="MONXML" />
+					</includes>
 				</feature>
 				<!-- Folha Pagamento -->
 				</feature>
