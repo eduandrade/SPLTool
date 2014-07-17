@@ -1,0 +1,29 @@
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <h:head>
+        <title>Login Error</title>
+    </h:head>
+    <h:body>
+    <h2>Usuario/senha invalido!</h2>
+
+    <p>Por favor, digite seu usuario e/ou senha corretamente.</p>
+        
+  	<form name="loginForm" method="POST" action="j_security_check">
+            <p><strong>Usuário: </strong>
+                <input type="text" name="j_username" size="25" />
+            </p>
+            <p><strong>Senha: </strong>
+                <input type="password" size="15" name="j_password" />
+            </p>
+            <p>
+                <input type="submit" value="Submit"/>
+                <input type="reset" value="Reset"/>
+           	</p>
+    </form> 
+
+    </h:body>
+</html>

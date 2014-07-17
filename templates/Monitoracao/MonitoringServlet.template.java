@@ -20,8 +20,11 @@ public class MonitoringServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		IModRhStats stats = MonitoringFactory.getMonitoring(MonitoringType.$VP-MONITORING);
-		response.getWriter().println(stats.printStats());
+		try {
+			IModRhStats stats = MonitoringFactory.getMonitoring(MonitoringType.$VP-MONITORING);
+			response.getWriter().println(stats.printStats());
+		} catch (Exception e) {
+			throw new ServletException(e);
+		}
 	}
-
 }

@@ -70,8 +70,8 @@ def process_features( doc )
     page.template = features.attributes["template"]
     page.title = features.attributes["title"]
     page.file_name = features.attributes["page"]
-    #page.features = features.attributes["has-features"].split(",")
 
+    puts "Processando paginas..."
     features.elements.each("links/link") { |elm_link|
       link = Link.new()
       link.id = elm_link.attributes["id"]
@@ -86,6 +86,7 @@ def process_features( doc )
       create_file( "output/pages", "#{page.file_name}", new_code  )
     end
 
+    puts "Processando managed beans..."
     features.elements.each("managed-beans/managed-bean") { |elm_mb|
       mbCondition = elm_mb.attributes["condition"]
       mbTemplate = elm_mb.attributes["template"]
@@ -98,11 +99,11 @@ def process_features( doc )
         create_file( "#{mbOutputDir}", "#{mbFileName}", new_code  )
       end
     }
+  }
 
-    features.elements.each("includes/include") { |elm_include|
-      copy_file( elm_include.attributes["file-path"], elm_include.attributes["output-dir"], elm_include.attributes["condition"] )
-    }
-
+  puts "Processando includes..."
+  doc.elements.each("featureModel/feature-root/feature[@name='Funcionais']/includes/include") { |elm_include|
+    copy_file( elm_include.attributes["file-path"], elm_include.attributes["output-dir"], elm_include.attributes["condition"] )
   }
 end
 

@@ -2,23 +2,20 @@ package br.com.splgenerator.web.servlets.monitoring;
 
 import javax.servlet.ServletException;
 
-import br.com.splgenerator.web.servlets.monitoring.txt.ModRhStatsTxt;
-import br.com.splgenerator.web.servlets.monitoring.xml.ModRhStatsXml;
-
 public class MonitoringFactory {
 	
 	public enum MonitoringType {
 		XML, TXT;
 	}
 	
-	public static IModRhStats getMonitoring(MonitoringType type) throws ServletException {
+	public static IModRhStats getMonitoring(MonitoringType type) throws ServletException, InstantiationException, IllegalAccessException, ClassNotFoundException {
 		IModRhStats stats = null;
 		switch (type) {
 			case XML:
-				stats = new ModRhStatsXml();
+				stats = (IModRhStats) Class.forName("br.com.splgenerator.web.servlets.monitoring.xml.ModRhStatsXml").newInstance();
 				break;
 			case TXT:
-				stats = new ModRhStatsTxt();
+				stats = (IModRhStats) Class.forName("br.com.splgenerator.web.servlets.monitoring.txt.ModRhStatsTxt").newInstance();
 				break;
 			default:
 				throw new ServletException("Tipo de monitoracao invalido!");

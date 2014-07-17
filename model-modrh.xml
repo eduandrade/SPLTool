@@ -30,7 +30,7 @@
 						<managed-beans>
 							<managed-bean condition="GerenciarFuncionario"
 														template="templates/Cadastro/GerenciarFuncionario.template.java"
-														output-dir="output/java/Cadastro/br/com/splgenerator/web/cadastro"
+														output-dir="output/java/br/com/splgenerator/web/cadastro"
 														file-name="GerenciarFuncionario.java" />
 						</managed-beans>
 						<links>
@@ -41,7 +41,7 @@
 						<managed-beans>
 							<managed-bean condition="Relatorios"
 														template="templates/Relatorios/RelatorioMB.template.java"
-														output-dir="output/java/Relatorios/br/com/splgenerator/web/relatorio"
+														output-dir="output/java/br/com/splgenerator/web/relatorio"
 														file-name="RelatorioMB.java" />
 						</managed-beans>
 						<links>
@@ -63,15 +63,15 @@
 					<managed-beans>
 						<managed-bean condition="DadosPagamento"
 													template="templates/FolhaPagamento/Administracao/DadosPagamento.template.java"
-													output-dir="output/java/FolhaPagamento/Administracao/br/com/splgenerator/web/folhapagamento/adm"
+													output-dir="output/java/br/com/splgenerator/web/folhapagamento/adm"
 													file-name="DadosPagamento.java" />
 						<managed-bean condition="Afastamentos"
 													template="templates/FolhaPagamento/Administracao/Afastamentos.template.java"
-													output-dir="output/java/FolhaPagamento/Administracao/br/com/splgenerator/web/folhapagamento/adm"
+													output-dir="output/java/br/com/splgenerator/web/folhapagamento/adm"
 													file-name="Afastamentos.java" />
 						<managed-bean condition="Rescisoes"
 													template="templates/FolhaPagamento/Administracao/Rescisoes.template.java"
-													output-dir="output/java/FolhaPagamento/Administracao/br/com/splgenerator/web/folhapagamento/adm"
+													output-dir="output/java/br/com/splgenerator/web/folhapagamento/adm"
 													file-name="Rescisoes.java" />
 					</managed-beans>
 					<links>
@@ -84,15 +84,15 @@
 					<managed-beans>
 						<managed-bean condition="Salario"
 													template="templates/FolhaPagamento/ProcessamentoPagamento/Salario.template.java"
-													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento/br/com/splgenerator/web/folhapagamento/processamentopagamento"
+													output-dir="output/java/br/com/splgenerator/web/folhapagamento/processamentopagamento"
 													file-name="Salario.java" />
 						<managed-bean condition="Bonus"
 													template="templates/FolhaPagamento/ProcessamentoPagamento/Bonus.template.java"
-													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento/br/com/splgenerator/web/folhapagamento/processamentopagamento"
+													output-dir="output/java/br/com/splgenerator/web/folhapagamento/processamentopagamento"
 													file-name="Bonus.java" />
 						<managed-bean condition="Reembolso"
 													template="templates/FolhaPagamento/ProcessamentoPagamento/Reembolso.template.java"
-													output-dir="output/java/FolhaPagamento/ProcessamentoPagamento/br/com/splgenerator/web/folhapagamento/processamentopagamento"
+													output-dir="output/java/br/com/splgenerator/web/folhapagamento/processamentopagamento"
 													file-name="Reembolso.java" />
 					</managed-beans>
 					<links>
@@ -110,30 +110,97 @@
 				</feature>
 				<feature name="Monitoracao">
 					<managed-beans>
-						<managed-bean 
+						<managed-bean
 													template="templates/Monitoracao/MonitoringServlet.template.java"
-													output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring"
+													output-dir="output/java/br/com/splgenerator/web/servlets/monitoring"
 													file-name="MonitoringServlet.java" />
 					</managed-beans>
-					<includes>
-						<include file-path="resources/Monitoracao/IModRhStats.java"
-										 output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring" />
-					  <include file-path="resources/Monitoracao/MonitoringFactory.java"
-											output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring" />
-						<include file-path="resources/Monitoracao/ModRhStats.java"
-											output-dir="output/java/Monitoracao/br/com/splgenerator/monitoring" />
-					  <include file-path="resources/Monitoracao/ModRhStatsTxt.java"
-											output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring/txt"
-											condition="MONTXT" />
-					  <include file-path="resources/Monitoracao/BeanStatsXml.java"
-											output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring/xml"
-											condition="MONXML" />
-					  <include file-path="resources/Monitoracao/ModRhStatsXml.java"
-											output-dir="output/java/Monitoracao/br/com/splgenerator/web/servlets/monitoring/xml"
-											condition="MONXML" />
-					</includes>
 				</feature>
 				<!-- Folha Pagamento -->
+
+					<includes>
+						<!-- Auditoria -->
+						<include file-path="resources/Auditoria/ILog.java"
+										output-dir="output/java/br/com/splgenerator/audit" />
+						<include file-path="resources/Auditoria/LogDb.java"
+										output-dir="output/java/br/com/splgenerator/audit"
+										condition="LOGDB" />
+						<include file-path="resources/Auditoria/LogTxt.java"
+										output-dir="output/java/br/com/splgenerator/audit"
+										condition="LOGTXT" />
+
+						<!-- Persistencia -->
+						<include file-path="resources/Persistencia/ModRhDao.java"
+										output-dir="output/java/br/com/splgenerator/dao" />
+						<include file-path="resources/Persistencia/JdbcBaseDao.java"
+										output-dir="output/java/br/com/splgenerator/dao/jdbc"
+										condition="DAOJDBC" />
+						<include file-path="resources/Persistencia/JdbcDao.java"
+										output-dir="output/java/br/com/splgenerator/dao/jdbc"
+										condition="DAOJDBC" />
+						<include file-path="resources/Persistencia/JpaDao.java"
+										output-dir="output/java/br/com/splgenerator/dao/jpa"
+										condition="DAOJPA" />
+						<include file-path="resources/Persistencia/InMemoryDao.java"
+										output-dir="output/java/br/com/splgenerator/dao/memory"
+										condition="DAOMEMORY" />
+
+						<!-- Monitoracao -->
+						<include file-path="resources/Monitoracao/IModRhStats.java"
+										output-dir="output/java/br/com/splgenerator/web/servlets/monitoring" />
+						<include file-path="resources/Monitoracao/MonitoringFactory.java"
+											output-dir="output/java/br/com/splgenerator/web/servlets/monitoring" />
+						<include file-path="resources/Monitoracao/ModRhStats.java"
+											output-dir="output/java/br/com/splgenerator/monitoring" />
+						<include file-path="resources/Monitoracao/ModRhStatsTxt.java"
+											output-dir="output/java/br/com/splgenerator/web/servlets/monitoring/txt"
+											condition="MONTXT" />
+						<include file-path="resources/Monitoracao/BeanStatsXml.java"
+											output-dir="output/java/br/com/splgenerator/web/servlets/monitoring/xml"
+											condition="MONXML" />
+						<include file-path="resources/Monitoracao/ModRhStatsXml.java"
+											output-dir="output/java/br/com/splgenerator/web/servlets/monitoring/xml"
+											condition="MONXML" />
+
+						<!-- Comum -->
+						<include file-path="resources/Comum/Funcionario.java" output-dir="output/java/br/com/splgenerator/model/cadastro" />
+
+						<!-- source -->
+						<include file-path="resources/source/messages.properties" output-dir="output/java" />
+						<include file-path="resources/source/META-INF/persistence.xml" output-dir="output/java/META-INF" />
+
+						<!-- webapp -->
+						<include file-path="resources/webapp/index.xhtml" output-dir="output/pages" />
+						<include file-path="resources/webapp/login.xhtml" output-dir="output/pages" />
+						<include file-path="resources/webapp/error.xhtml" output-dir="output/pages" />
+						<include file-path="resources/webapp/style/main.css" output-dir="output/pages/style" />
+						<include file-path="resources/webapp/WEB-INF/faces-config.xml" output-dir="output/pages/WEB-INF" />
+						<include file-path="resources/webapp/WEB-INF/sun-web.xml" output-dir="output/pages/WEB-INF" />
+						<include file-path="resources/webapp/WEB-INF/web.xml" output-dir="output/pages/WEB-INF" />
+						<include file-path="resources/webapp/WEB-INF/lib/eclipselink.jar" output-dir="output/pages/WEB-INF/lib" />
+						<include file-path="resources/webapp/WEB-INF/lib/javax.persistence_2.1.0.v201304241213.jar" output-dir="output/pages/WEB-INF/lib" />
+						<include file-path="resources/webapp/WEB-INF/lib/primefaces-3.5.jar" output-dir="output/pages/WEB-INF/lib" />
+						<include file-path="resources/webapp/WEB-INF/lib/xstream-1.4.7.jar" output-dir="output/pages/WEB-INF/lib" />
+
+						<include file-path="resources/webapp/cadastro/adicionarFuncionario.xhtml" output-dir="output/pages/cadastro" condition="GerenciarFuncionario" />
+						<include file-path="resources/webapp/cadastro/editarFuncionario.xhtml" output-dir="output/pages/cadastro" condition="GerenciarFuncionario" />
+						<include file-path="resources/webapp/cadastro/gerenciarFuncionarios.xhtml" output-dir="output/pages/cadastro" condition="GerenciarFuncionario" />
+
+						<include file-path="resources/webapp/relatorios/relatorioAdmissoes.xhtml" output-dir="output/pages/relatorios" condition="Relatorios" />
+						<include file-path="resources/webapp/relatorios/relatorioAniversariantes.xhtml" output-dir="output/pages/relatorios" condition="Relatorios" />
+						<include file-path="resources/webapp/relatorios/relatorioDadosBancarios.xhtml" output-dir="output/pages/relatorios" condition="Relatorios" />
+
+						<include file-path="resources/webapp/folhapagamento/administracao/dadosPagamento.xhtml" output-dir="output/pages/folhapagamento/administracao" condition="DadosPagamento" />
+						<include file-path="resources/webapp/folhapagamento/administracao/dadosPagamentoAtualizar.xhtml" output-dir="output/pages/folhapagamento/administracao" condition="DadosPagamento" />
+						<include file-path="resources/webapp/folhapagamento/administracao/afastamentos.xhtml" output-dir="output/pages/folhapagamento/administracao" condition="Afastamentos" />
+						<include file-path="resources/webapp/folhapagamento/administracao/afastamentosAtualizar.xhtml" output-dir="output/pages/folhapagamento/administracao" condition="Afastamentos" />
+						<include file-path="resources/webapp/folhapagamento/administracao/rescisoes.xhtml" output-dir="output/pages/folhapagamento/administracao" condition="Rescisoes" />
+
+						<include file-path="resources/webapp/folhapagamento/processamentopagamento/bonus.xhtml" output-dir="output/pages/folhapagamento/processamentopagamento" condition="Bonus" />
+						<include file-path="resources/webapp/folhapagamento/processamentopagamento/reembolso.xhtml" output-dir="output/pages/folhapagamento/processamentopagamento" condition="Reembolso" />
+						<include file-path="resources/webapp/folhapagamento/processamentopagamento/salario.xhtml" output-dir="output/pages/folhapagamento/processamentopagamento" condition="Salario" />
+
+					</includes>
 				</feature>
 
 				<!-- legado reembolso -->

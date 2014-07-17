@@ -1,0 +1,20 @@
+@CHARSET "ISO-8859-1";
+ 
+.body {
+    font-family: verdana;
+}
+.errorMessage{
+    color:red;
+}
+ 
+.infoMessage{
+    color:blue;
+}
+ 
+.warnMessage{
+    color:orange;
+}
+ 
+.header{
+    font-size:32px
+}
