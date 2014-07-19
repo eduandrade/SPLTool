@@ -27,13 +27,13 @@ Eduardo Andrade - 2014-04-09 13:12:38 -0300
 	<h:form id="form">
 		<h:messages errorClass="errorMessage" infoClass="infoMessage" warnClass="warnMessage" />
 		<h:outputLabel value="Banco:" />
-		<h:selectOneMenu value="#{relatorioMB.selectedBancosFuncionarios}">
-		   	<f:selectItems value="#{relatorioMB.bancosFuncionarios}" />
+		<h:selectOneMenu value="#{relatorioDadosBancarios.selectedBancosFuncionarios}">
+		   	<f:selectItems value="#{relatorioDadosBancarios.bancosFuncionarios}" />
 		</h:selectOneMenu>
-		<h:commandButton id="buscarBancosFuncionarios" value="Buscar" action="#{relatorioMB.buscarBancosFuncionarios}" />
+		<h:commandButton id="buscarBancosFuncionarios" value="Buscar" action="#{relatorioDadosBancarios.buscarBancosFuncionarios}" />
 		
 		<br/><br/>
-	    <h:dataTable var="func" border="1" value="#{relatorioMB.funcionarios}" binding="#{relatorioMB.htmlDataTable}" >
+	    <h:dataTable var="func" border="1" value="#{relatorioDadosBancarios.funcionarios}" binding="#{relatorioDadosBancarios.htmlDataTable}" >
 			<h:column>
 				<f:facet name="header">#{msg['label.id']}</f:facet>
 	    		#{func.id}

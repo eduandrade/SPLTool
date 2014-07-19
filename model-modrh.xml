@@ -39,10 +39,18 @@
 					</feature>
 					<feature name="Relatorios" page="relatorios/index.xhtml" title="Relatorios" template="templates/index.template.xhtml" is-parent="true">
 						<managed-beans>
-							<managed-bean condition="Relatorios"
-														template="templates/Relatorios/RelatorioMB.template.java"
+							<managed-bean condition="RelatorioAdmissoes"
+														template="templates/Relatorios/RelatorioAdmissoes.template.java"
 														output-dir="output/java/br/com/splgenerator/web/relatorio"
-														file-name="RelatorioMB.java" />
+														file-name="RelatorioAdmissoes.java" />
+							<managed-bean condition="RelatorioAniversariantes"
+														template="templates/Relatorios/RelatorioAniversariantes.template.java"
+														output-dir="output/java/br/com/splgenerator/web/relatorio"
+														file-name="RelatorioAniversariantes.java" />
+							<managed-bean condition="RelatorioDadosBancarios"
+														template="templates/Relatorios/RelatorioDadosBancarios.template.java"
+														output-dir="output/java/br/com/splgenerator/web/relatorio"
+														file-name="RelatorioDadosBancarios.java" />
 						</managed-beans>
 						<links>
 							<link id="RelatorioAdmissoes" value="relatorioAdmissoes.jsf" label="Relatorio de Admissoes" />
@@ -141,6 +149,9 @@
 						<include file-path="resources/Persistencia/JpaDao.java"
 										output-dir="output/java/br/com/splgenerator/dao/jpa"
 										condition="DAOJPA" />
+						<include file-path="resources/source/META-INF/persistence.xml"
+										output-dir="output/resources/META-INF"
+										condition="DAOJPA" />
 						<include file-path="resources/Persistencia/InMemoryDao.java"
 										output-dir="output/java/br/com/splgenerator/dao/memory"
 										condition="DAOMEMORY" />
@@ -166,8 +177,7 @@
 						<include file-path="resources/Comum/Funcionario.java" output-dir="output/java/br/com/splgenerator/model/cadastro" />
 
 						<!-- source -->
-						<include file-path="resources/source/messages.properties" output-dir="output/java" />
-						<include file-path="resources/source/META-INF/persistence.xml" output-dir="output/java/META-INF" />
+						<include file-path="resources/source/messages.properties" output-dir="output/resources" />
 
 						<!-- webapp -->
 						<include file-path="resources/webapp/index.xhtml" output-dir="output/pages" />
@@ -177,18 +187,21 @@
 						<include file-path="resources/webapp/WEB-INF/faces-config.xml" output-dir="output/pages/WEB-INF" />
 						<include file-path="resources/webapp/WEB-INF/sun-web.xml" output-dir="output/pages/WEB-INF" />
 						<include file-path="resources/webapp/WEB-INF/web.xml" output-dir="output/pages/WEB-INF" />
+
+						<!--
 						<include file-path="resources/webapp/WEB-INF/lib/eclipselink.jar" output-dir="output/pages/WEB-INF/lib" />
 						<include file-path="resources/webapp/WEB-INF/lib/javax.persistence_2.1.0.v201304241213.jar" output-dir="output/pages/WEB-INF/lib" />
 						<include file-path="resources/webapp/WEB-INF/lib/primefaces-3.5.jar" output-dir="output/pages/WEB-INF/lib" />
 						<include file-path="resources/webapp/WEB-INF/lib/xstream-1.4.7.jar" output-dir="output/pages/WEB-INF/lib" />
+						-->
 
 						<include file-path="resources/webapp/cadastro/adicionarFuncionario.xhtml" output-dir="output/pages/cadastro" condition="GerenciarFuncionario" />
 						<include file-path="resources/webapp/cadastro/editarFuncionario.xhtml" output-dir="output/pages/cadastro" condition="GerenciarFuncionario" />
 						<include file-path="resources/webapp/cadastro/gerenciarFuncionarios.xhtml" output-dir="output/pages/cadastro" condition="GerenciarFuncionario" />
 
-						<include file-path="resources/webapp/relatorios/relatorioAdmissoes.xhtml" output-dir="output/pages/relatorios" condition="Relatorios" />
-						<include file-path="resources/webapp/relatorios/relatorioAniversariantes.xhtml" output-dir="output/pages/relatorios" condition="Relatorios" />
-						<include file-path="resources/webapp/relatorios/relatorioDadosBancarios.xhtml" output-dir="output/pages/relatorios" condition="Relatorios" />
+						<include file-path="resources/webapp/relatorios/relatorioAdmissoes.xhtml" output-dir="output/pages/relatorios" condition="RelatorioAdmissoes" />
+						<include file-path="resources/webapp/relatorios/relatorioAniversariantes.xhtml" output-dir="output/pages/relatorios" condition="RelatorioAniversariantes" />
+						<include file-path="resources/webapp/relatorios/relatorioDadosBancarios.xhtml" output-dir="output/pages/relatorios" condition="RelatorioDadosBancarios" />
 
 						<include file-path="resources/webapp/folhapagamento/administracao/dadosPagamento.xhtml" output-dir="output/pages/folhapagamento/administracao" condition="DadosPagamento" />
 						<include file-path="resources/webapp/folhapagamento/administracao/dadosPagamentoAtualizar.xhtml" output-dir="output/pages/folhapagamento/administracao" condition="DadosPagamento" />
@@ -199,6 +212,10 @@
 						<include file-path="resources/webapp/folhapagamento/processamentopagamento/bonus.xhtml" output-dir="output/pages/folhapagamento/processamentopagamento" condition="Bonus" />
 						<include file-path="resources/webapp/folhapagamento/processamentopagamento/reembolso.xhtml" output-dir="output/pages/folhapagamento/processamentopagamento" condition="Reembolso" />
 						<include file-path="resources/webapp/folhapagamento/processamentopagamento/salario.xhtml" output-dir="output/pages/folhapagamento/processamentopagamento" condition="Salario" />
+
+						<!-- setup -->
+						<include file-path="resources/setup/pom.xml" output-dir="output/target" />
+						<include file-path="resources/setup/glassfishpasswordfile" output-dir="output/target" />
 
 					</includes>
 				</feature>

@@ -56,6 +56,7 @@ public class LogDb implements ILog {
 	
 	@Override
 	public void log(String level, String msg) {
+		System.out.println("Inserindo log no banco. level: [" + level + "] | msg : [" + msg + "]");
 		
 		Connection connection = null;
 		PreparedStatement stmt = null;
@@ -68,7 +69,7 @@ public class LogDb implements ILog {
 			stmt.setString(1, level);
 			stmt.setString(2, msg);
 			int ret = stmt.executeUpdate();
-			System.out.println("ret = " + ret);
+			System.out.println("Log inserido no banco: " + ret);
 			
 		} catch (SQLException e) {
 			throw new RuntimeException(e.getMessage(), e);

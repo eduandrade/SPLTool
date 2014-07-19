@@ -1,0 +1,521 @@
+2013-04-08 23:01:32.558 GMT : Security manager installed using the Basic server security policy.
+2013-04-08 23:01:33.502 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-04-08 23:01:33.502 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-04-08 23:04:38.867 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013d-ebe2-0e1a-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-04-09 03:25:09.531 GMT:
+Shutting down instance a816c00e-013d-ebe2-0e1a-000054734384
+----------------------------------------------------------------
+2013-04-09 03:25:09.605 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2013-04-10 01:59:22.645 GMT : Security manager installed using the Basic server security policy.
+2013-04-10 01:59:27.727 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-04-10 01:59:27.728 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-04-10 02:01:29.696 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013d-f1ab-4314-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-04-10 02:57:48.338 GMT:
+Shutting down instance a816c00e-013d-f1ab-4314-000054734384
+----------------------------------------------------------------
+2013-04-10 02:57:48.384 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2013-04-10 22:42:08.384 GMT : Security manager installed using the Basic server security policy.
+2013-04-10 22:42:11.134 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-04-10 22:42:11.134 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-04-10 22:43:22.806 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013d-f61d-05c5-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-04-11 01:46:52.517 GMT:
+Shutting down instance a816c00e-013d-f61d-05c5-000054734384
+----------------------------------------------------------------
+2013-04-11 01:46:52.577 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2013-04-11 22:54:31.366 GMT : Security manager installed using the Basic server security policy.
+2013-04-11 22:54:35.321 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-04-11 22:54:35.321 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-04-11 22:58:29.385 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013d-fb4e-bd02-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-04-12 01:51:51.262 GMT:
+Shutting down instance a816c00e-013d-fb4e-bd02-000054734384
+----------------------------------------------------------------
+2013-04-12 01:51:51.615 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2013-04-16 00:19:04.098 GMT : Security manager installed using the Basic server security policy.
+2013-04-16 00:19:06.613 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-04-16 00:19:06.613 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-04-16 01:03:05.972 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013e-1035-8ffb-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-04-16 03:25:01.430 GMT:
+Shutting down instance a816c00e-013e-1035-8ffb-000054734384
+----------------------------------------------------------------
+2013-04-16 03:25:01.501 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2013-04-16 21:59:36.378 GMT : Security manager installed using the Basic server security policy.
+2013-04-16 21:59:43.735 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-04-16 21:59:43.735 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-04-16 22:24:41.250 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013e-14dc-4bba-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-04-16 23:00:37.277 GMT:
+Shutting down instance a816c00e-013e-14dc-4bba-000054734384
+----------------------------------------------------------------
+2013-04-16 23:00:37.380 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2013-04-16 23:05:34.513 GMT : Security manager installed using the Basic server security policy.
+2013-04-16 23:05:38.312 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-04-16 23:05:38.312 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-04-16 23:06:28.278 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013e-1518-a818-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-04-17 00:54:54.030 GMT:
+Shutting down instance a816c00e-013e-1518-a818-000054734384
+----------------------------------------------------------------
+2013-04-17 00:54:54.065 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2013-04-23 23:24:48.835 GMT : Security manager installed using the Basic server security policy.
+2013-04-23 23:24:51.485 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-04-23 23:24:51.485 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-04-23 23:55:09.493 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013e-3936-c4a5-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-04-24 01:35:27.747 GMT:
+Shutting down instance a816c00e-013e-3936-c4a5-000054734384
+----------------------------------------------------------------
+2013-04-24 01:35:27.811 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2013-04-24 19:46:15.697 GMT : Security manager installed using the Basic server security policy.
+2013-04-24 19:46:18.371 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-04-24 19:46:18.371 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-04-24 21:45:03.926 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013e-3d95-0906-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-04-24 22:24:14.794 GMT:
+Shutting down instance a816c00e-013e-3d95-0906-000054734384
+----------------------------------------------------------------
+2013-04-24 22:24:14.822 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2013-05-08 01:03:46.475 GMT : Security manager installed using the Basic server security policy.
+2013-05-08 01:03:53.399 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2013-05-08 01:03:53.399 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-08 01:09:19.899 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-013e-81aa-6d34-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-05-08 01:21:40.445 GMT:
+Shutting down instance a816c00e-013e-81aa-6d34-000054734384
+----------------------------------------------------------------
+2013-05-08 01:21:40.455 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-09 15:44:00.309 GMT : Security manager installed using the Basic server security policy.
+2014-04-09 15:44:03.607 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-09 15:44:03.607 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-09 15:55:39.199 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-4729-05e9-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-09 16:56:10.457 GMT:
+Shutting down instance a816c00e-0145-4729-05e9-000054734384
+----------------------------------------------------------------
+2014-04-09 16:56:10.536 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-09 22:17:34.592 GMT : Security manager installed using the Basic server security policy.
+2014-04-09 22:17:37.721 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-09 22:17:37.721 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-09 22:18:19.569 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-4891-57ae-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-10 00:17:01.386 GMT:
+Shutting down instance a816c00e-0145-4891-57ae-000054734384
+----------------------------------------------------------------
+2014-04-10 00:17:01.489 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-15 01:16:25.490 GMT : Security manager installed using the Basic server security policy.
+2014-04-15 01:16:31.506 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-15 01:16:31.506 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-15 01:17:33.750 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-62f4-e649-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-15 04:33:22.317 GMT:
+Shutting down instance a816c00e-0145-62f4-e649-000054734384
+----------------------------------------------------------------
+2014-04-15 04:33:23.096 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-21 01:13:09.701 GMT : Security manager installed using the Basic server security policy.
+2014-04-21 01:13:43.180 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-21 01:13:43.210 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-21 02:00:29.844 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-21 15:05:22.012 GMT : Security manager installed using the Basic server security policy.
+2014-04-21 15:05:32.087 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-21 15:05:32.095 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-21 15:32:28.119 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-84d1-ffbf-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-21 20:01:07.738 GMT:
+Shutting down instance a816c00e-0145-84d1-ffbf-000054734384
+----------------------------------------------------------------
+2014-04-21 20:01:07.861 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-21 20:32:09.295 GMT : Security manager installed using the Basic server security policy.
+2014-04-21 20:32:47.452 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-21 20:32:47.581 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-21 20:59:57.416 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-85fd-4885-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+2014-04-21 21:21:44.400 GMT : Security manager installed using the Basic server security policy.
+2014-04-21 21:21:49.149 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-21 21:21:49.149 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-21 21:24:05.322 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-862a-87b6-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-21 21:32:12.532 GMT:
+Shutting down instance a816c00e-0145-862a-87b6-000054734384
+----------------------------------------------------------------
+2014-04-21 21:32:12.612 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-21 21:45:34.895 GMT : Security manager installed using the Basic server security policy.
+2014-04-21 21:45:37.976 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-21 21:45:37.976 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-21 21:47:01.133 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-8640-5c47-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-21 22:08:47.071 GMT:
+Shutting down instance a816c00e-0145-8640-5c47-000054734384
+----------------------------------------------------------------
+2014-04-21 22:08:47.125 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-21 22:09:58.187 GMT : Security manager installed using the Basic server security policy.
+2014-04-21 22:09:59.221 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-21 22:09:59.221 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-21 22:10:17.149 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-8656-ae46-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-21 22:34:29.393 GMT:
+Shutting down instance a816c00e-0145-8656-ae46-000054734384
+----------------------------------------------------------------
+2014-04-21 22:34:29.405 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-23 00:50:25.212 GMT : Security manager installed using the Basic server security policy.
+2014-04-23 00:50:38.052 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-23 00:50:38.063 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-23 01:14:00.049 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-8c0f-ff52-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-23 03:53:26.061 GMT:
+Shutting down instance a816c00e-0145-8c0f-ff52-000054734384
+----------------------------------------------------------------
+2014-04-23 03:53:26.136 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-23 23:33:42.714 GMT : Security manager installed using the Basic server security policy.
+2014-04-23 23:33:47.617 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-23 23:33:47.617 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-23 23:34:30.579 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-90f0-1c91-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-24 03:03:11.602 GMT:
+Shutting down instance a816c00e-0145-90f0-1c91-000054734384
+----------------------------------------------------------------
+2014-04-24 03:03:11.715 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-25 19:19:30.608 GMT : Security manager installed using the Basic server security policy.
+2014-04-25 19:19:33.804 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-25 19:19:33.804 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-25 20:13:37.870 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-9a54-11c1-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-25 22:40:09.459 GMT:
+Shutting down instance a816c00e-0145-9a54-11c1-000054734384
+----------------------------------------------------------------
+2014-04-25 22:40:09.791 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-25 22:42:51.902 GMT : Security manager installed using the Basic server security policy.
+2014-04-25 22:42:53.843 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-25 22:42:53.843 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-25 22:43:26.010 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-9b0e-3f16-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-25 22:51:19.644 GMT:
+Shutting down instance a816c00e-0145-9b0e-3f16-000054734384
+----------------------------------------------------------------
+2014-04-25 22:51:19.676 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-28 23:25:40.790 GMT : Security manager installed using the Basic server security policy.
+2014-04-28 23:25:44.106 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-28 23:25:44.106 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-28 23:37:35.653 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-aaa8-873b-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-29 03:04:40.263 GMT:
+Shutting down instance a816c00e-0145-aaa8-873b-000054734384
+----------------------------------------------------------------
+2014-04-29 03:04:40.377 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-04-30 01:43:24.505 GMT : Security manager installed using the Basic server security policy.
+2014-04-30 01:43:28.406 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-04-30 01:43:28.406 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-04-30 01:48:01.710 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0145-b04c-fd22-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-04-30 02:27:53.581 GMT:
+Shutting down instance a816c00e-0145-b04c-fd22-000054734384
+----------------------------------------------------------------
+2014-04-30 02:27:53.732 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-06-17 02:06:47.605 GMT : Security manager installed using the Basic server security policy.
+2014-06-17 02:06:50.687 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-06-17 02:06:50.687 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-06-17 02:08:51.887 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0146-a793-a396-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-06-17 02:22:48.568 GMT:
+Shutting down instance a816c00e-0146-a793-a396-000054734384
+----------------------------------------------------------------
+2014-06-17 02:22:48.594 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-02 01:34:40.284 GMT : Security manager installed using the Basic server security policy.
+2014-07-02 01:34:43.440 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-02 01:34:43.440 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-02 01:35:42.712 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0146-f4b5-9f78-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-02 03:16:53.051 GMT:
+Shutting down instance a816c00e-0146-f4b5-9f78-000054734384
+----------------------------------------------------------------
+2014-07-02 03:16:53.325 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-03 01:18:31.214 GMT : Security manager installed using the Basic server security policy.
+2014-07-03 01:18:35.170 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-03 01:18:35.170 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-03 01:22:18.468 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0146-f9cd-316b-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-03 02:28:28.938 GMT:
+Shutting down instance a816c00e-0146-f9cd-316b-000054734384
+----------------------------------------------------------------
+2014-07-03 02:28:29.037 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-08 00:31:09.015 GMT : Security manager installed using the Basic server security policy.
+2014-07-08 00:31:12.358 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-08 00:31:12.358 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-08 00:32:37.397 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-1361-9ed5-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-08 01:13:43.197 GMT:
+Shutting down instance a816c00e-0147-1361-9ed5-000054734384
+----------------------------------------------------------------
+2014-07-08 01:13:43.334 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-08 01:15:28.748 GMT : Security manager installed using the Basic server security policy.
+2014-07-08 01:15:29.792 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-08 01:15:29.792 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-08 01:20:36.280 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-138a-3106-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-08 02:14:40.948 GMT:
+Shutting down instance a816c00e-0147-138a-3106-000054734384
+----------------------------------------------------------------
+2014-07-08 02:14:41.092 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-11 00:39:08.497 GMT : Security manager installed using the Basic server security policy.
+2014-07-11 00:39:13.651 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-11 00:39:13.651 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-11 00:56:19.764 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-22dc-0824-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-11 03:21:56.187 GMT:
+Shutting down instance a816c00e-0147-22dc-0824-000054734384
+----------------------------------------------------------------
+2014-07-11 03:21:56.419 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-12 15:19:33.689 GMT : Security manager installed using the Basic server security policy.
+2014-07-12 15:19:37.540 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-12 15:19:37.540 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-12 15:20:36.534 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-2b28-6d33-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-12 23:35:07.779 GMT:
+Shutting down instance a816c00e-0147-2b28-6d33-000054734384
+----------------------------------------------------------------
+2014-07-12 23:35:07.979 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-15 02:33:30.005 GMT : Security manager installed using the Basic server security policy.
+2014-07-15 02:33:34.522 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-15 02:33:34.522 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-15 02:34:38.005 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-37de-28bc-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-15 02:39:12.068 GMT:
+Shutting down instance a816c00e-0147-37de-28bc-000054734384
+----------------------------------------------------------------
+2014-07-15 02:39:12.430 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-17 01:41:47.948 GMT : Security manager installed using the Basic server security policy.
+2014-07-17 01:41:51.873 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-17 01:41:51.873 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-17 01:42:46.781 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-41fb-8ae8-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-17 02:37:20.544 GMT:
+Shutting down instance a816c00e-0147-41fb-8ae8-000054734384
+----------------------------------------------------------------
+2014-07-17 02:37:20.636 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-18 04:00:44.611 GMT : Security manager installed using the Basic server security policy.
+2014-07-18 04:00:45.453 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-18 04:00:45.453 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-18 04:02:34.935 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-47a1-15fa-000054734384
+on database directory /Users/eduardo/development/workspace-ipt/.metadata/.plugins/glassfish.javadb/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-18 04:29:25.877 GMT:
+Shutting down instance a816c00e-0147-47a1-15fa-000054734384
+----------------------------------------------------------------
+2014-07-18 04:29:25.991 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-19 20:15:27.083 GMT : Security manager installed using the Basic server security policy.
+2014-07-19 20:15:29.085 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-19 20:15:29.085 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-19 20:16:11.404 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-19 20:24:33.504 GMT : Security manager installed using the Basic server security policy.
+2014-07-19 20:24:34.339 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-19 20:24:34.339 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-19 20:26:14.792 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-504c-27f2-000056d58c0f
+on database directory /Users/eduardo/development/workspace-github/SPLTool/resources/setup/db/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-19 20:30:14.499 GMT:
+Shutting down instance a816c00e-0147-504c-27f2-000056d58c0f
+----------------------------------------------------------------
+2014-07-19 20:30:14.643 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-19 20:31:10.963 GMT : Security manager installed using the Basic server security policy.
+2014-07-19 20:31:11.541 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-19 20:31:11.541 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-19 20:32:28.844 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-5052-378c-000056d58c0f
+on database directory /Users/eduardo/development/workspace-github/SPLTool/resources/setup/db/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-19 20:35:53.356 GMT:
+Shutting down instance a816c00e-0147-5052-378c-000056d58c0f
+----------------------------------------------------------------
+2014-07-19 20:35:53.369 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown
+2014-07-19 20:45:38.163 GMT : Security manager installed using the Basic server security policy.
+2014-07-19 20:45:38.814 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+2014-07-19 20:45:38.814 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2014-07-19 20:52:37.615 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0147-505f-7305-000056d58c0f
+on database directory /Users/eduardo/development/workspace-github/SPLTool/resources/setup/db/splreembolsodb  
+
+Database Class Loader started - derby.database.classpath=''
+
+2014-07-19 21:48:00.075 GMT:
+Shutting down instance a816c00e-0147-505f-7305-000056d58c0f
+----------------------------------------------------------------
+2014-07-19 21:48:00.476 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) shutdown

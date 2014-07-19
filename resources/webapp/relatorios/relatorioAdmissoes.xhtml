@@ -29,19 +29,19 @@ Eduardo Andrade - 2014-04-09 13:12:38 -0300
 		<h:outputLabel for="periodo"  value="Periodo de Admissao:" />
 		
 		<h:outputLabel for="dataAdmissaoDe"  value="De" />
-		<h:inputText   id="dataAdmissaoDe"   value="#{relatorioMB.dataAdmissaoDe}" required="true" requiredMessage="Favor informar a data de admissao inicial" size="10">
+		<h:inputText   id="dataAdmissaoDe"   value="#{relatorioAdmissoes.dataAdmissaoDe}" required="true" requiredMessage="Favor informar a data de admissao inicial" size="10">
 	        	<f:convertDateTime pattern='dd/MM/yyyy' />
 	    </h:inputText>
 		
 		<h:outputLabel for="dataAdmissaoAte"  value="Ate" />
-		<h:inputText   id="dataAdmissaoAte"   value="#{relatorioMB.dataAdmissaoAte}" required="true" requiredMessage="Favor informar a data de admissao final" size="10">
+		<h:inputText   id="dataAdmissaoAte"   value="#{relatorioAdmissoes.dataAdmissaoAte}" required="true" requiredMessage="Favor informar a data de admissao final" size="10">
 	        	<f:convertDateTime pattern='dd/MM/yyyy' />
 	    </h:inputText>
 	    
-	    <h:commandButton id="buscarPeriodoAdmissao" value="Buscar" action="#{relatorioMB.buscarPeriodoAdmissao}" />
+	    <h:commandButton id="buscarPeriodoAdmissao" value="Buscar" action="#{relatorioAdmissoes.buscarPeriodoAdmissao}" />
 	    
 	    <br/><br/>
-	    <h:dataTable var="func" border="1" value="#{relatorioMB.funcionarios}" binding="#{relatorioMB.htmlDataTable}" >
+	    <h:dataTable var="func" border="1" value="#{relatorioAdmissoes.funcionarios}" binding="#{relatorioAdmissoes.htmlDataTable}" >
 			<h:column>
 				<f:facet name="header">#{msg['label.id']}</f:facet>
 	    		#{func.id}
